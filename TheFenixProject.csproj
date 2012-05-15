@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4C2B9B1A-D19E-498D-9155-37ADA2C99959}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TheFenixProject</RootNamespace>
+    <AssemblyName>TheFenixProject</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Images\101003CLJNSANDERSF01.JPG" />
+    <Content Include="Content\Images\101003CLJNSANDERSF02.JPG" />
+    <Content Include="Content\Images\101003CLJNSANDERSF03-1.jpg" />
+    <Content Include="Content\Images\101003CLJNSANDERSF03.JPG" />
+    <Content Include="Content\Images\101003CLJNSANDERSF04.JPG" />
+    <Content Include="Content\Images\101003CLJNSANDERSF07-1.jpg" />
+    <Content Include="Content\Images\101003CLJNSANDERSF08-1.jpg" />
+    <Content Include="Content\Images\101003CLJNSANDERSF09.JPG" />
+    <Content Include="Content\Images\101003CLJNSANDERSF10.JPG" />
+    <Content Include="Content\Images\101003CLJNSANDERSF11-1.jpg" />
+    <Content Include="Content\Images\101003CLJNSANDERSF11.JPG" />
+    <Content Include="Content\Images\101003CLJNSANDERSF12.JPG" />
+    <Content Include="Content\Images\101003CLJNSANDERSF13.JPG" />
+    <Content Include="Content\Images\101003CLJNSANDERSF14.JPG" />
+    <Content Include="Content\Images\101003CLJNSANDERSF15.JPG" />
+    <Content Include="Content\Images\101003CLJNSANDERSF16-1.jpg" />
+    <Content Include="Content\Images\101003CLJNSANDERSF17-1.jpg" />
+    <Content Include="Content\Images\101003CLJNSANDERSF17-2.jpg" />
+    <Content Include="Content\Images\101003CLJNSANDERSF19.JPG" />
+    <Content Include="Content\Images\101003CLJNSANDERSF20-1.jpg" />
+    <Content Include="Content\Images\101003CLJNSANDERSF20-2.jpg" />
+    <Content Include="Content\Images\101003CLJNSANDERSF21-1.jpg" />
+    <Content Include="Content\Images\101003CLJNSANDERSF21-2.jpg" />
+    <Content Include="Content\Images\101003CLJNSANDERSF21.JPG" />
+    <Content Include="Content\Images\101003CLJNSANDERSF22-1.jpg" />
+    <Content Include="Content\Images\101003CLJNSANDERSF22.JPG" />
+    <Content Include="Content\Images\101003CLJNSANDERSF25-1.jpg" />
+    <Content Include="Content\Images\101003CLJNSANDERSF26-1.jpg" />
+    <Content Include="Content\Images\101003CLJNSANDERSF30-1.jpg" />
+    <Content Include="Content\Images\101003CLJNSANDERSF48-1.jpg" />
+    <Content Include="Content\Images\101003CLJNSANDERSF48-2.jpg" />
+    <Content Include="Content\Images\101003CLJNSANDERSF48-3.jpg" />
+    <Content Include="Content\Images\1AboutUsLogo.png" />
+    <Content Include="Content\Images\1ADNWLogo.png" />
+    <Content Include="Content\Images\1BlueDiamondLogo.png" />
+    <Content Include="Content\Images\1EventsLogo.png" />
+    <Content Include="Content\Images\1FacebookLogo.png" />
+    <Content Include="Content\Images\1GalleryLogo.png" />
+    <Content Include="Content\Images\1HomeLogo.png" />
+    <Content Include="Content\Images\1MASTERLogo.png" />
+    <Content Include="Content\Images\1ReverbnationLogo.png" />
+    <Content Include="Content\Images\1th_FenixAboutUS.png" />
+    <Content Include="Content\Images\AboutUsLogo.png" />
+    <Content Include="Content\Images\ADNWLogo.png" />
+    <Content Include="Content\Images\BlueDiamondLogo.png" />
+    <Content Include="Content\Images\ContactLogo.png" />
+    <Content Include="Content\Images\DSC_0011-1.jpg" />
+    <Content Include="Content\Images\DSC_0029-1.jpg" />
+    <Content Include="Content\Images\DSC_0032-1.jpg" />
+    <Content Include="Content\Images\DSC_0048-1.jpg" />
+    <Content Include="Content\Images\DSC_0069-1.jpg" />
+    <Content Include="Content\Images\DSC_0072-1.jpg" />
+    <Content Include="Content\Images\DSC_0074-1.jpg" />
+    <Content Include="Content\Images\DSC_0075-1.jpg" />
+    <Content Include="Content\Images\DSC_0077-1.jpg" />
+    <Content Include="Content\Images\DSC_0085-1.jpg" />
+    <Content Include="Content\Images\DSC_0087-1.jpg" />
+    <Content Include="Content\Images\DSC_0120-1.jpg" />
+    <Content Include="Content\Images\DSC_0125-1.jpg" />
+    <Content Include="Content\Images\DSC_0128-1.jpg" />
+    <Content Include="Content\Images\DSC_0131-1.jpg" />
+    <Content Include="Content\Images\DSC_0135-1.jpg" />
+    <Content Include="Content\Images\DSC_0146-1.jpg" />
+    <Content Include="Content\Images\DSC_0151-1.jpg" />
+    <Content Include="Content\Images\DSC_0152-1.jpg" />
+    <Content Include="Content\Images\DSC_0158-1.jpg" />
+    <Content Include="Content\Images\DSC_0173-1.jpg" />
+    <Content Include="Content\Images\DSC_2262-1.jpg" />
+    <Content Include="Content\Images\DSC_7077-2.jpg" />
+    <Content Include="Content\Images\DSC_7201-1.jpg" />
+    <Content Include="Content\Images\DSC_7201-2.jpg" />
+    <Content Include="Content\Images\DSC_7314-1.jpg" />
+    <Content Include="Content\Images\DSC_7554-1.jpg" />
+    <Content Include="Content\Images\DSC_7581-1.jpg" />
+    <Content Include="Content\Images\DSC_8030-1.jpg" />
+    <Content Include="Content\Images\DSC_8037-1.jpg" />
+    <Content Include="Content\Images\DSC_8107-1.jpg" />
+    <Content Include="Content\Images\DSC_8129-1.jpg" />
+    <Content Include="Content\Images\DSC_8142-1.jpg" />
+    <Content Include="Content\Images\DSC_9058-1.jpg" />
+    <Content Include="Content\Images\DSC_9058-2.jpg" />
+    <Content Include="Content\Images\DSC_9741-1.jpg" />
+    <Content Include="Content\Images\DSC_9756-1.jpg" />
+    <Content Include="Content\Images\DSC_9774-1.jpg" />
+    <Content Include="Content\Images\DSC_9791-1.jpg" />
+    <Content Include="Content\Images\DSC_9813-1.jpg" />
+    <Content Include="Content\Images\DSC_9874-1.jpg" />
+    <Content Include="Content\Images\DSC_9939-1.jpg" />
+    <Content Include="Content\Images\DSC_9945-1.jpg" />
+    <Content Include="Content\Images\DSC_9946-1.jpg" />
+    <Content Include="Content\Images\DSC_9956-1.jpg" />
+    <Content Include="Content\Images\DSC_9983-1.jpg" />
+    <Content Include="Content\Images\EventsLogo.png" />
+    <Content Include="Content\Images\FacebookLogo.png" />
+    <Content Include="Content\Images\GalleryLogo.png" />
+    <Content Include="Content\Images\HomeLogo.png" />
+    <Content Include="Content\Images\ReverbnationLogo.png" />
+    <Content Include="Content\Images\th_101003CLJNSANDERSF01.JPG" />
+    <Content Include="Content\Images\th_101003CLJNSANDERSF02.JPG" />
+    <Content Include="Content\Images\th_101003CLJNSANDERSF03-1.jpg" />
+    <Content Include="Content\Images\th_101003CLJNSANDERSF03.JPG" />
+    <Content Include="Content\Images\th_101003CLJNSANDERSF04.JPG" />
+    <Content Include="Content\Images\th_101003CLJNSANDERSF07-1.jpg" />
+    <Content Include="Content\Images\th_101003CLJNSANDERSF08-1.jpg" />
+    <Content Include="Content\Images\th_101003CLJNSANDERSF09.JPG" />
+    <Content Include="Content\Images\th_101003CLJNSANDERSF10.JPG" />
+    <Content Include="Content\Images\th_101003CLJNSANDERSF11-1.jpg" />
+    <Content Include="Content\Images\th_101003CLJNSANDERSF11.JPG" />
+    <Content Include="Content\Images\th_101003CLJNSANDERSF12.JPG" />
+    <Content Include="Content\Images\th_101003CLJNSANDERSF13.JPG" />
+    <Content Include="Content\Images\th_101003CLJNSANDERSF14.JPG" />
+    <Content Include="Content\Images\th_101003CLJNSANDERSF15.JPG" />
+    <Content Include="Content\Images\th_101003CLJNSANDERSF16-1.jpg" />
+    <Content Include="Content\Images\th_101003CLJNSANDERSF17-1.jpg" />
+    <Content Include="Content\Images\th_101003CLJNSANDERSF17-2.jpg" />
+    <Content Include="Content\Images\th_101003CLJNSANDERSF19.JPG" />
+    <Content Include="Content\Images\th_101003CLJNSANDERSF20-1.jpg" />
+    <Content Include="Content\Images\th_101003CLJNSANDERSF20-2.jpg" />
+    <Content Include="Content\Images\th_101003CLJNSANDERSF21-1.jpg" />
+    <Content Include="Content\Images\th_101003CLJNSANDERSF21-2.jpg" />
+    <Content Include="Content\Images\th_101003CLJNSANDERSF21.JPG" />
+    <Content Include="Content\Images\th_101003CLJNSANDERSF22-1.jpg" />
+    <Content Include="Content\Images\th_101003CLJNSANDERSF22.JPG" />
+    <Content Include="Content\Images\th_101003CLJNSANDERSF25-1.jpg" />
+    <Content Include="Content\Images\th_101003CLJNSANDERSF26-1.jpg" />
+    <Content Include="Content\Images\th_101003CLJNSANDERSF30-1.jpg" />
+    <Content Include="Content\Images\th_101003CLJNSANDERSF48-1.jpg" />
+    <Content Include="Content\Images\th_101003CLJNSANDERSF48-2.jpg" />
+    <Content Include="Content\Images\th_101003CLJNSANDERSF48-3.jpg" />
+    <Content Include="Content\Images\th_DSC_0011-1.jpg" />
+    <Content Include="Content\Images\th_DSC_0029-1.jpg" />
+    <Content Include="Content\Images\th_DSC_0032-1.jpg" />
+    <Content Include="Content\Images\th_DSC_0048-1.jpg" />
+    <Content Include="Content\Images\th_DSC_0069-1.jpg" />
+    <Content Include="Content\Images\th_DSC_0072-1.jpg" />
+    <Content Include="Content\Images\th_DSC_0074-1.jpg" />
+    <Content Include="Content\Images\th_DSC_0075-1.jpg" />
+    <Content Include="Content\Images\th_DSC_0077-1.jpg" />
+    <Content Include="Content\Images\th_DSC_0085-1.jpg" />
+    <Content Include="Content\Images\th_DSC_0087-1.jpg" />
+    <Content Include="Content\Images\th_DSC_0120-1.jpg" />
+    <Content Include="Content\Images\th_DSC_0125-1.jpg" />
+    <Content Include="Content\Images\th_DSC_0128-1.jpg" />
+    <Content Include="Content\Images\th_DSC_0131-1.jpg" />
+    <Content Include="Content\Images\th_DSC_0135-1.jpg" />
+    <Content Include="Content\Images\th_DSC_0146-1.jpg" />
+    <Content Include="Content\Images\th_DSC_0151-1.jpg" />
+    <Content Include="Content\Images\th_DSC_0152-1.jpg" />
+    <Content Include="Content\Images\th_DSC_0158-1.jpg" />
+    <Content Include="Content\Images\th_DSC_0173-1.jpg" />
+    <Content Include="Content\Images\th_DSC_2262-1.jpg" />
+    <Content Include="Content\Images\th_DSC_7077-2.jpg" />
+    <Content Include="Content\Images\th_DSC_7201-1.jpg" />
+    <Content Include="Content\Images\th_DSC_7201-2.jpg" />
+    <Content Include="Content\Images\th_DSC_7314-1.jpg" />
+    <Content Include="Content\Images\th_DSC_7554-1.jpg" />
+    <Content Include="Content\Images\th_DSC_7581-1.jpg" />
+    <Content Include="Content\Images\th_DSC_8107-1.jpg" />
+    <Content Include="Content\Images\th_DSC_8129-1.jpg" />
+    <Content Include="Content\Images\th_DSC_8142-1.jpg" />
+    <Content Include="Content\Images\th_DSC_9058-1.jpg" />
+    <Content Include="Content\Images\th_DSC_9058-2.jpg" />
+    <Content Include="Content\Images\th_DSC_9741-1.jpg" />
+    <Content Include="Content\Images\th_DSC_9756-1.jpg" />
+    <Content Include="Content\Images\th_DSC_9774-1.jpg" />
+    <Content Include="Content\Images\th_DSC_9791-1.jpg" />
+    <Content Include="Content\Images\th_DSC_9813-1.jpg" />
+    <Content Include="Content\Images\th_DSC_9874-1.jpg" />
+    <Content Include="Content\Images\th_DSC_9939-1.jpg" />
+    <Content Include="Content\Images\th_DSC_9945-1.jpg" />
+    <Content Include="Content\Images\th_DSC_9946-1.jpg" />
+    <Content Include="Content\Images\th_DSC_9956-1.jpg" />
+    <Content Include="Content\Images\th_DSC_9983-1.jpg" />
+    <Content Include="Content\Images\th_FenixAboutUS.png" />
+    <Content Include="Content\Images\th_JeffOtto-1.jpg" />
+    <Content Include="Styles\Layout\1AboutUsLogo.png" />
+    <Content Include="Styles\Layout\1ADNWLogo.png" />
+    <Content Include="Styles\Layout\1BlueDiamondLogo.png" />
+    <Content Include="Styles\Layout\1EventsLogo.png" />
+    <Content Include="Styles\Layout\1FacebookLogo.png" />
+    <Content Include="Styles\Layout\1GalleryLogo.png" />
+    <Content Include="Styles\Layout\1HomeLogo.png" />
+    <Content Include="Styles\Layout\1MASTERLogo.png" />
+    <Content Include="Styles\Layout\1ReverbnationLogo.png" />
+    <Content Include="Styles\Layout\AboutUsLogo.png" />
+    <Content Include="Styles\Layout\ADNWLogo.png" />
+    <Content Include="Styles\Layout\BlueDiamondLogo.png" />
+    <Content Include="Styles\Layout\ContactLogo.png" />
+    <Content Include="Styles\Layout\EventsLogo.png" />
+    <Content Include="Styles\Layout\FacebookLogo.png" />
+    <Content Include="Content\Images\FenixandWorth.jpg" />
+    <Content Include="Content\Images\Fred-1.jpg" />
+    <Content Include="Content\Images\Fred.jpg" />
+    <Content Include="Content\Images\JeffFrankel-1.jpg" />
+    <Content Include="Content\Images\JeffFrankel.jpg" />
+    <Content Include="Content\Images\JeffOtto-1.jpg" />
+    <Content Include="Pages\News.html" />
+    <Content Include="Scripts\jquery.tmpl.min.js" />
+    <Content Include="Scripts\Navigation.js" />
+    <Content Include="Styles\Layout\101003CLJNSANDERSF15.JPG" />
+    <Content Include="default.html" />
+    <Content Include="Pages\AboutUs.html" />
+    <Content Include="Pages\Contact.html" />
+    <Content Include="Pages\Events.html" />
+    <Content Include="Pages\GuestBook.html" />
+    <Content Include="Pages\Home.html" />
+    <Content Include="Pages\Media\ImageLibrary.html" />
+    <Content Include="Pages\Media\VideoLibrary.html" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Styles\Content.css" />
+    <Content Include="Styles\Layout\FenixHeader.png" />
+    <Content Include="Styles\Layout\FlamePageBreak.png" />
+    <Content Include="Styles\Layout\GalleryLogo.png" />
+    <Content Include="Styles\Layout\GuestbookLogo.png" />
+    <Content Include="Styles\Layout\HomeLogo.png" />
+    <Content Include="Styles\Layout\ReverbnationLogo.png" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\Audio\" />
+    <Folder Include="Content\Videos\" />
+    <Folder Include="Controls\" />
+    <Folder Include="Pages\Members\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Fonts\batmfa_.ttf" />
+    <None Include="Fonts\batmfa_.woff" />
+    <None Include="Fonts\bm.eot" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1364</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

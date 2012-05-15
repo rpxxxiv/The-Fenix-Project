@@ -1,0 +1,29 @@
+﻿body 
+{
+    font-family:Prestige Elite Std;
+    max-width:900px;
+}
+
+div
+{
+    border: 1px solid black;
+}
+
+.centered
+{
+    vertical-align:middle;
+    text-align:center;
+}
+
+a
+{
+    border:none;
+    font-size:140%;
+    text-decoration:none;
+    color:goldenrod;
+}
+
+a img
+{
+    border:none;    
+}

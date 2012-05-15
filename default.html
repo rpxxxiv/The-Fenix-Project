@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>The Fenix Project</title>
+    <link type="text/css" href="Styles/Site.css" rel="stylesheet" />
+    <script type="text/javascript" src="Scripts/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="Scripts/jquery.tmpl.min.js"></script>
+    <script type="text/javascript" src="Scripts/Navigation.js"></script>
+    <script type="text/javascript">
+        var toggleSpeed = 500;
+        $(window).ready(
+            function () {
+                $('#navFrame').load(
+                function () {
+                    //frameResize($(this));
+                    $('html, body').animate({ scrollTop: 0 }, 0);
+                    $(this).animate({ opacity: 1.0 }, toggleSpeed);
+                });
+                $('#navFrame').attr('src', "Pages/Home.html");
+                function frameResize(iframe) {
+
+                    var frm = $(iframe).attr('id');
+                    var h = document.getElementById(frm).contentWindow.document.body.offsetHeight + 'px';
+                    document.getElementById(frm).style.height = h;
+                }
+
+                $("#navButton").tmpl($NavigationLinks).appendTo("#nav");
+                $("#nav").removeClass('noJquery');
+                SetLinkEvents($('#nav'), $('#navFrame'));
+
+                $('.btnNav').each(
+                    function () {
+                        $(this).hover(
+                            function (e) {
+                                $(this).stop().animate({ 'margin-left': '0px' }, 500);
+                            },
+                            function () {
+                                $(this).stop().animate({ 'margin-left': '-135px' }, 1000);
+                            });
+                    });
+            });
+    </script>
+</head>
+<body>
+<script type="text/x-jquery-tmpl" id="navButton">
+    <li class="btnNav"><a href="${Page}" target={{if InDomain}} "navFrame" {{else}} "_blank" {{/if}}><div style="float:left;">${Title}<img src="${Icon}" /></div></a></li>
+</script>
+<div id="banner">
+    <div id="header" class="Shadow"><img src="Styles/Layout/FenixHeader.png" /></div>
+</div>
+<div id="content">
+    <div id="displayFrame">
+        <iframe id="navFrame" name="navFrame" seamless="seamless" ></iframe>
+    </div>
+    <div id="sideNav">
+        <ul id="nav" class="noJquery">
+        </ul>
+    </div>
+</div>
+<div id="footer"></div>
+</body>
+</html>
