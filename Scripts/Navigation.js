@@ -13,6 +13,7 @@
     { Title: "Blue Diamond", Icon: "Styles/Layout/BlueDiamondLogo.png", Page: "http://bluediamondpdx.com"}
 ]
 
+var toggleSpeed = 500;
 
 function SetLinkEvents(ullia, iframe) {
 

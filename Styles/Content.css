@@ -2,6 +2,7 @@
 {
     font-family:Prestige Elite Std;
     max-width:900px;
+    color:Goldenrod;
 }
 
 div
@@ -26,4 +27,13 @@ a
 a img
 {
     border:none;    
+}
+
+.pageFooter
+{
+    position:relative;
+    bottom:0px;
+    padding:0;
+    padding-top:40px;
+    margin-bottom:0px;
 }

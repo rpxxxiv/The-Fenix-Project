@@ -184,6 +184,7 @@ ul
     height:100%;
     width:100%;
     border:none;
+    background-color:transparent;
 }
 #footer
 {
@@ -193,4 +194,5 @@ ul
     left:0;
     width:100%;
     height:5%;
+
 }

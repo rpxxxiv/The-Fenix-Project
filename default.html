@@ -9,36 +9,41 @@
     <script type="text/javascript">
         var toggleSpeed = 500;
         $(window).ready(
-            function () {
-                $('#navFrame').load(
+        function () {
+            $('#navFrame').load(
                 function () {
                     //frameResize($(this));
+                    $('.btnNav').stop().animate({ 'margin-left': '-135px' }, 0);
                     $('html, body').animate({ scrollTop: 0 }, 0);
                     $(this).animate({ opacity: 1.0 }, toggleSpeed);
                 });
-                $('#navFrame').attr('src', "Pages/Home.html");
-                function frameResize(iframe) {
+            $('#navFrame').attr('src', "Pages/Home.html");
+            function frameResize(iframe) {
 
-                    var frm = $(iframe).attr('id');
-                    var h = document.getElementById(frm).contentWindow.document.body.offsetHeight + 'px';
-                    document.getElementById(frm).style.height = h;
-                }
+                var frm = $(iframe).attr('id');
+                var h = document.getElementById(frm).contentWindow.document.body.offsetHeight + 'px';
+                document.getElementById(frm).style.height = h;
+            }
 
-                $("#navButton").tmpl($NavigationLinks).appendTo("#nav");
-                $("#nav").removeClass('noJquery');
-                SetLinkEvents($('#nav'), $('#navFrame'));
+            $("#navButton").tmpl($NavigationLinks).appendTo("#nav");
+            $("#nav").removeClass('noJquery');
+            SetLinkEvents($('#nav'), $('#navFrame'));
 
-                $('.btnNav').each(
+            $('.btnNav').each(
                     function () {
                         $(this).hover(
                             function (e) {
                                 $(this).stop().animate({ 'margin-left': '0px' }, 500);
                             },
                             function () {
-                                $(this).stop().animate({ 'margin-left': '-135px' }, 1000);
+                                $(this).delay(2000).animate({ 'margin-left': '-135px' }, 500);
                             });
+//                        $(this).click(function () {
+//                            
+//                        });
                     });
-            });
+
+        });
     </script>
 </head>
 <body>

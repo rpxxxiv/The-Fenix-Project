@@ -94,6 +94,7 @@
     <Content Include="Content\Images\1ReverbnationLogo.png" />
     <Content Include="Content\Images\1th_FenixAboutUS.png" />
     <Content Include="Content\Images\AboutUsLogo.png" />
+    <Content Include="Content\Images\ADNW-logo.jpg" />
     <Content Include="Content\Images\ADNWLogo.png" />
     <Content Include="Content\Images\BlueDiamondLogo.png" />
     <Content Include="Content\Images\ContactLogo.png" />
@@ -225,7 +226,23 @@
     <Content Include="Content\Images\th_DSC_9956-1.jpg" />
     <Content Include="Content\Images\th_DSC_9983-1.jpg" />
     <Content Include="Content\Images\th_FenixAboutUS.png" />
+    <Content Include="Content\Images\th_Fred-1.jpg" />
     <Content Include="Content\Images\th_JeffOtto-1.jpg" />
+    <Content Include="Pages\LegalFooter.html" />
+    <Content Include="Pages\Members\FenixSanders.htm" />
+    <Content Include="Pages\Members\FredGarner.htm" />
+    <Content Include="Pages\Members\JasonThomas.htm" />
+    <Content Include="Pages\Members\JefferyOtto.htm" />
+    <Content Include="Pages\Members\JeffFrankel.htm" />
+    <Content Include="Pages\Members\Members.html" />
+    <Content Include="Scripts\content.js" />
+    <Content Include="Scripts\FullCalendar\Agenda.js" />
+    <Content Include="Scripts\FullCalendar\fullcalendar.js" />
+    <Content Include="Scripts\FullCalendar\fullcalendar.min.js" />
+    <Content Include="Scripts\FullCalendar\gcal.js" />
+    <Content Include="Scripts\Members.js" />
+    <Content Include="Styles\Agenda.css" />
+    <Content Include="Styles\Calendar\fullcalendar.css" />
     <Content Include="Styles\Layout\1AboutUsLogo.png" />
     <Content Include="Styles\Layout\1ADNWLogo.png" />
     <Content Include="Styles\Layout\1BlueDiamondLogo.png" />
@@ -283,7 +300,6 @@
     <Folder Include="Content\Audio\" />
     <Folder Include="Content\Videos\" />
     <Folder Include="Controls\" />
-    <Folder Include="Pages\Members\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Fonts\batmfa_.ttf" />
