@@ -3,13 +3,10 @@
 <head>
     <title>The Fenix Project</title>
     <link type="text/css" href="Styles/Site.css" rel="stylesheet" />
-    <meta name="description" content="This is the Fenix Project Website" />
-    <meta name="keywords" content="HTML, Samples, Code, Development" />
     <script type="text/javascript" src="Scripts/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="Scripts/jquery.tmpl.min.js"></script>
     <script type="text/javascript" src="Scripts/Navigation.js"></script>
     <script type="text/javascript">
-
         var toggleSpeed = 500;
         $(window).ready(
         function () {
@@ -41,13 +38,13 @@
                             function () {
                                 $(this).delay(2000).animate({ 'margin-left': '-135px' }, 500);
                             });
-//                        $(this).click(function () {
-//                            
-//                        });
                     });
 
         });
     </script>
+    <!--[if lt IE 9]>
+<script type="text/javascript" src="Scripts/html5shiv.js"></script>
+<![endif]-->
 </head>
 <body>
 <script type="text/x-jquery-tmpl" id="navButton">
