@@ -7,8 +7,8 @@
     { Title: "Guestbook", Icon: "Styles/Layout/GuestbookLogo.png", Page: "Pages/Guestbook.html", InDomain: true},
     { Title: "Media", Icon: "Styles/Layout/GalleryLogo.png", Page: "Pages/Media/ImageLibrary.html", InDomain: true},
     //{ Title: "News", Icon: "Styles/Layout/NewLogo.png", Page: "Pages/News.html", InDomain: true},
-    { Title: "Facebook", Icon: "Styles/Layout/FacebookLogo.png", Page: "http://www.facebook.com" },
-    { Title: "ReverbNation", Icon: "Styles/Layout/ReverbNationLogo.png", Page: "http://www.reverbnation.com"},
+    {Title: "Facebook", Icon: "Styles/Layout/FacebookLogo.png", Page: "http://www.facebook.com/profile.php?id=1664809096" },
+    { Title: "ReverbNation", Icon: "Styles/Layout/ReverbNationLogo.png", Page: "http://www.reverbnation.com/thefenixproject"},
     { Title: "ADNW", Icon: "Styles/Layout/ADNWLogo.png", Page: "http://www.myadnw.com" },
     { Title: "Blue Diamond", Icon: "Styles/Layout/BlueDiamondLogo.png", Page: "http://bluediamondpdx.com"}
 ]
