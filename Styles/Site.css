@@ -1,0 +1,198 @@
+﻿/*@font-face
+{
+    font-family: "BatmanForever"; 
+    src: url('../Fonts/batmfa_.ttf') format('truetype'), url('../Fonts/batmfa_.woff') format('woff'); 
+}
+@font-face
+{
+    font-family: "BF"; 
+    src: url('../Fonts/bm.eot?#iefix') format('embedded-opentype');
+}
+@font-face
+{
+    font-family: "BFandroid";
+    src: url('../Fonts/bm.eot?') format('eot');
+}*/
+html
+{
+    margin:0 auto;
+    width:100%;
+    height:100%;
+    color:Goldenrod;
+    background-color:Black;
+    font-family:Prestige Elite Std;/*"BF", "BFAndroid","BatmanForever";*/
+    font-size:20px;
+    display:block;    
+    overflow-x:hidden;
+}
+body 
+{
+    width:100%;
+    height:100%;
+    margin:auto;
+    padding:0;
+    background-image: url('./Layout/101003CLJNSANDERSF15.JPG');
+    background-color: #000000;
+    background-position:center top;
+    background-repeat:no-repeat;
+    background-size:100%;  
+
+}
+ul
+{
+    list-style-type:none;   
+}
+
+#banner
+{
+    height:10%;
+    width:100%;
+    position:absolute;
+    top:0;
+    margin-left:auto;
+    margin-right:auto;
+    margin:auto;
+    padding:0;
+    text-align:center;
+       
+}
+#header
+{    
+    margin:0px;
+    padding:0px;    
+}
+#header img
+{
+    width:700px;
+    height:100px;
+}
+.Shadow
+{
+    text-shadow:5px 5px 5px #000000;
+    zoom: 1;
+    /*filter: progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=45);	*/
+	filter: progid:DXImageTransform.Microsoft.Chroma(Color=#000000)
+	        progid:DXImageTransform.Microsoft.DropShadow(OffX=5, OffY=5, Color=#000000);
+    
+}
+#content
+{
+    position:absolute;
+    top:10%;
+    height:85%;
+    width:95%;
+    margin-bottom:0;
+    margin-bottom:auto;
+}
+
+#sideNav
+{
+    position:fixed;
+    left:0;
+    width:20%;
+    height:100%;
+    margin-bottom:0;
+    overflow-x:hidden;
+    float:left;
+}
+#frmDisplay
+{
+    height:100%;   
+    width:100%;
+}
+
+#nav
+{
+   list-style-type: none;
+    padding: 0;
+    margin-left: 20px;
+    font-weight: bold;      
+    overflow:hidden;
+}
+#nav.noJquery li:hover
+{
+    margin-left:0px;
+}
+.btnNav
+{
+    height:40px;
+    width:175px;
+    margin-left:-135px;
+    padding:0;
+    margin-top:5px;
+    margin-bottom:5px;
+    color:Goldenrod;
+    font-size:75%;  
+    
+}
+
+.btnNav a,
+.btnNav a:visited
+{
+    width:100%;
+    border:none;
+    text-decoration:none; 
+    color:Goldenrod;  
+}
+.btnNav div
+{
+    /*line-height:34px;*/
+    width:175px;   
+}
+.btnNav img
+{
+    height:34px;
+    width:34px;
+    padding:2px; 
+    border:none;
+    float:right; 
+    vertical-align:bottom;
+    
+}
+/*.btnNav ul
+{
+   margin-left:0;
+    
+}*/
+.navIcon
+{
+    margin:auto;
+    width:30px;
+    height:30px;    
+    text-align:center; 
+    
+}
+.navTitle
+{
+    display:none;   
+}
+#displayFrame
+{
+    position:absolute;
+    left:10%;
+    margin:0;
+    padding:0;
+    height:100%;
+    width:95%;
+    float:right;
+    display:inline;
+
+    z-index:0;    
+}
+#navFrame
+{
+    height:100%;
+    width:100%;
+    border:none;
+    background-color:transparent;
+}
+#footer
+{
+    margin-bottom:auto;   
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:5%;
+
+}
