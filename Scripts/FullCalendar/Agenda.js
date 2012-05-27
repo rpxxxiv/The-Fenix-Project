@@ -6,8 +6,6 @@ var applyAll = fc.applyAll;
 
 function LoadAgenda() {
 
-//    v
-//    var success = sourceOptions.success;
     var data = $.extend({}, {}, {
 //        'start-min': formatDate(start, 'u'),
 //        'start-max': formatDate(end, 'u'),
