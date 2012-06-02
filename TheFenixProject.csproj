@@ -228,6 +228,8 @@
     <Content Include="Content\Images\th_FenixAboutUS.png" />
     <Content Include="Content\Images\th_Fred-1.jpg" />
     <Content Include="Content\Images\th_JeffOtto-1.jpg" />
+    <Content Include="Controls\Guestbook\ADNWGuestbook.htm" />
+    <Content Include="Controls\Guestbook\GuestbookEntry.htm" />
     <Content Include="Pages\LegalFooter.html" />
     <Content Include="Pages\Members\FenixSanders.htm" />
     <Content Include="Pages\Members\FredGarner.htm" />
@@ -236,6 +238,7 @@
     <Content Include="Pages\Members\JeffFrankel.htm" />
     <Content Include="Pages\Members\Members.html" />
     <Content Include="Scripts\content.js" />
+    <Content Include="Scripts\ControlProxies\ADNWServiceProxy.js" />
     <Content Include="Scripts\FullCalendar\Agenda.js" />
     <Content Include="Scripts\FullCalendar\fullcalendar.js" />
     <Content Include="Scripts\FullCalendar\fullcalendar.min.js" />
@@ -245,6 +248,7 @@
     <Content Include="Scripts\Members.js" />
     <Content Include="Styles\Agenda.css" />
     <Content Include="Styles\Calendar\fullcalendar.css" />
+    <Content Include="Styles\Guestbook.css" />
     <Content Include="Styles\Layout\1AboutUsLogo.png" />
     <Content Include="Styles\Layout\1ADNWLogo.png" />
     <Content Include="Styles\Layout\1BlueDiamondLogo.png" />
@@ -302,7 +306,6 @@
   <ItemGroup>
     <Folder Include="Content\Audio\" />
     <Folder Include="Content\Videos\" />
-    <Folder Include="Controls\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Fonts\batmfa_.ttf" />

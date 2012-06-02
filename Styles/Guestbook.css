@@ -1,0 +1,63 @@
+﻿html, body 
+{
+    margin:0;
+    padding:0;
+    height:100%;
+    width:100%;
+}
+
+#gbLayoutRoot
+{
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+    background-color:Blue;   
+}
+
+#gbLeft
+{
+    height:100%;
+    width:30%;
+    margin:0;
+    padding:0;
+    border:2px solid black;
+    float:left;
+}
+
+#gbRight
+{
+    height:100%;
+    width:60%;
+    margin:0;
+    padding:0;
+    border:2px solid black;   
+    float:right;
+}
+form#Sign
+{
+    
+}
+
+form#Sign fieldset
+{
+    border:2px solid black;
+}
+
+form#Sign legend
+{
+    font-size:125%;
+}
+
+form#Sign ol
+{
+    list-style-type:none;   
+}
+form#Sign li
+{
+    margin:0;
+    padding:0;
+    text-align:left;   
+    padding-bottom:10px;
+}
+

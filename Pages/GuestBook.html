@@ -2,8 +2,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
+    <script type="text/javascript" src="../Scripts/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery.tmpl.min.js"></script>
+    <link type="text/css" href="../Styles/Guestbook.css" rel="stylesheet" />
+    <script type="text/javascript" src="../Scripts/ControlProxies/ADNWServiceProxy.js"></script>
+    <script type="text/javascript">
+        $.support.cors = true;
+        $(window).ready(
+
+            function () {
+                $('#GuestbookEntries').Guestbook(
+                {
+                    Id: 'f4dd85cf-ce1e-e2d1-3171-650938abd2b7'
+                });
+            }
+        )
+    </script>
 </head>
 <body>
-    <img src="../Styles/Layout/FenixGuestbookConcept.png" style="position:absolute; height:95%; width:75%;" />
+    <div id="GuestbookEntries"></div>
 </body>
 </html>
