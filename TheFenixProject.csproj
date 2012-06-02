@@ -280,6 +280,7 @@
     <Content Include="Pages\Media\VideoLibrary.html" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <Content Include="Styles\Content.css" />
+    <Content Include="Styles\Layout\FenixGuestbookConcept.png" />
     <Content Include="Styles\Layout\FenixHeader.png" />
     <Content Include="Styles\Layout\FlamePageBreak.png" />
     <Content Include="Styles\Layout\GalleryLogo.png" />
