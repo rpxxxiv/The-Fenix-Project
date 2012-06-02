@@ -12,8 +12,8 @@
         clientApp: 'ClientApplications'
     }
     var gbDefaults = {
-        theme: 'Styles/Guestbook.css',  
-        expand: '?$expand=ADNWGuestbooks/ADNWGuestbookEntries'
+        theme: 'Styles/Guestbook.css',
+        expand: '?$format=json&$expand=ADNWGuestbooks/ADNWGuestbookEntries'
     }
     $.fn.Guestbook = function (options) {
         options = $.extend(true, {}, ProxyDefaults, gbDefaults, options);
@@ -23,7 +23,7 @@
         this.each(function (i, _element) {
             var element = $(_element);
             Guestbook(element, options);
-           
+
         });
     }
 
@@ -52,21 +52,37 @@
     }
 
     function GetGuestbookEntries(options) {
-        $.ajax({
-            type: "GET",
-            url: options.url,
-            //crossDomain:true,
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            beforeSend: function (XMLHttpRequest) {
-                XMLHttpRequest.setRequestHeader("Accept", "application/json");
-            },
-            success: function (msg) { LoadGuestbookEntries(msg.d, options, element); },
-            error: function (xhr, ajaxOptions, thrownError) {
-                alert(xhr.status);
-                alert(thrownError);
+        if ($.browser.msie && window.XDomainRequest) {
+            var xdr = new XDomainRequest();
+            xdr.open("get", options.url);
+            xdr.onload = function () {
+                var JSON = $.parseJSON(xdr.responseText);
+                if (JSON == null || typeof (JSON) == 'undefined') {
+                    JSON = $.parseJSON(data.firstChild.textContent);
+                }
+                LoadGuestbookEntries(JSON.d, options, element);
             }
-        });
+            xdr.send();
+
+        }
+        else {
+
+            $.ajax({
+                type: "GET",
+                url: options.url,
+                //crossDomain:true,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                beforeSend: function (XMLHttpRequest) {
+                    XMLHttpRequest.setRequestHeader("Accept", "application/json");
+                },
+                success: function (msg) { LoadGuestbookEntries(msg.d, options, element); },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert(xhr.status);
+                    alert(thrownError);
+                }
+            });
+        }
     }
 
     var $gbDto = function (Entry) {
@@ -111,29 +127,46 @@
         });
         var entry = $gbDto(fields);
 
-        $.ajax({
-            type: "POST",
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            url: ProxyDefaults.url + "SignGuestbookSave?guestbookId='" + entry.ADNWGuestbookId + "'&guestName='"+entry.GuestName + "'&guestComment='" + entry.GuestComment + "'&guestEmail='" + entry.GuestEmail + "'",
-            beforeSend: function (XMLHttpRequest) {
-                XMLHttpRequest.setRequestHeader("Accept", "application/json");
-            },
-            success: function (dat, textStatus, XmlHttpRequest) {
-                if (successCallback) {
-                    successCallback(dat.d, textStatus, XmlHttpRequest);
-                }
-            },
-            error: function (XmlHttpRequest, textStatus, errorThrown) {
-                if (errorCallback) errorCallback(XmlHttpRequest, textStatus, errorThrown);
-                else alert("Error on the creation of record; Error - " + errorThrown);
+        var url = ProxyDefaults.url + "SignGuestbookSave?guestbookId='" + entry.ADNWGuestbookId + "'&guestName='" + entry.GuestName + "'&guestComment='" + entry.GuestComment + "'&guestEmail='" + entry.GuestEmail + "'";
+
+        if ($.browser.msie && window.XDomainRequest) {
+            var xdr = new XDomainRequest();
+            xdr.open("post", url);
+            xdr.onload = function () {
+//                var JSON = $.parseJSON(xdr.responseText);
+//                if (JSON == null || typeof (JSON) == 'undefined') {
+//                    JSON = $.parseJSON(data.firstChild.textContent);
+//                }
+                successCallback(null, null, null);
             }
-        });
+            xdr.send();
+
+        }
+        else {
+            $.ajax({
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                url: url,
+                beforeSend: function (XMLHttpRequest) {
+                    XMLHttpRequest.setRequestHeader("Accept", "application/json");
+                },
+                success: function (dat, textStatus, XmlHttpRequest) {
+                    if (successCallback) {
+                        successCallback(dat.d, textStatus, XmlHttpRequest);
+                    }
+                },
+                error: function (XmlHttpRequest, textStatus, errorThrown) {
+                    if (errorCallback) errorCallback(XmlHttpRequest, textStatus, errorThrown);
+                    else alert("Error on the creation of record; Error - " + errorThrown);
+                }
+            });
+        }
     }
 
     function SaveGuestbookEntryCompleted(data, textStatus, XmlHttpRequest) {
         $('#Sign').each(
-            function() { this.reset();});
+            function () { this.reset(); });
         Guestbook(null, options);
     }
 
