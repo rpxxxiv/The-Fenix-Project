@@ -101,10 +101,14 @@
         var entries = [];
         var gbooks = guestbookSource.ADNWGuestbooks[0];
         GuestbookId = gbooks.ADNWGuestbookId;
-        for (var i = 0; i < gbooks.ADNWGuestbookEntries.length; i++) {
+        var jsonEntries = gbooks.ADNWGuestbookEntries;
+        jsonEntries = jsonEntries.sort(function (a, b) { return b.GuestbookEntryId - a.GuestbookEntryId; });
+        for (var i = 0; i < jsonEntries.length; i++) {
             entries.push($gbDto(gbooks.ADNWGuestbookEntries[i]));
 
         }
+
+
         var gbEntryTemplate = $('#GBEntry').html();
         if (gbEntryTemplate) {
             $('#gbRight').empty();
@@ -133,10 +137,10 @@
             var xdr = new XDomainRequest();
             xdr.open("post", url);
             xdr.onload = function () {
-//                var JSON = $.parseJSON(xdr.responseText);
-//                if (JSON == null || typeof (JSON) == 'undefined') {
-//                    JSON = $.parseJSON(data.firstChild.textContent);
-//                }
+                //                var JSON = $.parseJSON(xdr.responseText);
+                //                if (JSON == null || typeof (JSON) == 'undefined') {
+                //                    JSON = $.parseJSON(data.firstChild.textContent);
+                //                }
                 successCallback(null, null, null);
             }
             xdr.send();
