@@ -66,22 +66,13 @@
 
         }
         else {
-
-            $.ajax({
-                type: "GET",
-                url: options.url,
-                //crossDomain:true,
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
-                beforeSend: function (XMLHttpRequest) {
-                    XMLHttpRequest.setRequestHeader("Accept", "application/json");
-                },
-                success: function (msg) { LoadGuestbookEntries(msg.d, options, element); },
-                error: function (xhr, ajaxOptions, thrownError) {
-                    alert(xhr.status);
-                    alert(thrownError);
-                }
-            });
+            $.getJSON(
+                options.url,
+                function (msg) {
+                    LoadGuestbookEntries(msg.d, options, element);
+                }).error(function (jqXHR, textStatus, errorThrown) {
+                    alert('Error:' + textStatus + '  Message:' + errorThrown);
+                });
         }
     }
 
@@ -94,7 +85,10 @@
         if (edate) {
             entry.DateAdded = new Date(parseInt(edate.substr(6)));
         }
+        entry.Subscribe = Entry.Subscribe;
         entry.GuestEmail = Entry.GuestEmail;
+        entry.Subscribe = Entry.Subscribe;
+
         return entry;
     }
     function LoadGuestbookEntries(guestbookSource, options, element) {
@@ -128,43 +122,35 @@
             if (this.name != 'DateAdded') {
                 fields[this.name] = $(this).val();
             }
+            if (this.name == 'Subscribe') {
+                fields[this.name] = $(this).is(':checked');
+            }
+
         });
         var entry = $gbDto(fields);
-
-        var url = ProxyDefaults.url + "SignGuestbookSave?guestbookId='" + entry.ADNWGuestbookId + "'&guestName='" + entry.GuestName + "'&guestComment='" + entry.GuestComment + "'&guestEmail='" + entry.GuestEmail + "'";
+        if (!EntryValid(entry)) {
+            return;
+        }
+        var url = ProxyDefaults.url + "SignGuestbookSave?guestbookId='" + entry.ADNWGuestbookId + "'&guestName='" + entry.GuestName + "'&guestComment='" + entry.GuestComment + "'&guestEmail='" + entry.GuestEmail + "'&subscribe=" + entry.Subscribe;
 
         if ($.browser.msie && window.XDomainRequest) {
             var xdr = new XDomainRequest();
             xdr.open("post", url);
             xdr.onload = function () {
-                //                var JSON = $.parseJSON(xdr.responseText);
-                //                if (JSON == null || typeof (JSON) == 'undefined') {
-                //                    JSON = $.parseJSON(data.firstChild.textContent);
-                //                }
                 successCallback(null, null, null);
             }
             xdr.send();
-
         }
         else {
-            $.ajax({
-                type: "POST",
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
-                url: url,
-                beforeSend: function (XMLHttpRequest) {
-                    XMLHttpRequest.setRequestHeader("Accept", "application/json");
-                },
-                success: function (dat, textStatus, XmlHttpRequest) {
+            $.post(
+                url,
+                function (dat, textStatus, XmlHttpRequest) {
                     if (successCallback) {
                         successCallback(dat.d, textStatus, XmlHttpRequest);
                     }
-                },
-                error: function (XmlHttpRequest, textStatus, errorThrown) {
-                    if (errorCallback) errorCallback(XmlHttpRequest, textStatus, errorThrown);
-                    else alert("Error on the creation of record; Error - " + errorThrown);
-                }
-            });
+                }).error(function (jqXHR, textStatus, errorThrown) {
+                    alert('Error:' + textStatus + '  Message:' + errorThrown);
+                });
         }
     }
 
@@ -175,7 +161,16 @@
     }
 
 
+    var EntryValid = function (data) {
+        var valid = false;
 
+        if (data.GuestName.length > 0 && data.GuestEmail.length > 0) {
+            
+            return true;
+        }
+        alert('Please Entry your Name and Email to sign the Guestbook');
+        return valid;
+    }
 
 
 
