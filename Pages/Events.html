@@ -9,7 +9,7 @@
     <script type="text/javascript" src="../Scripts/FullCalendar/fullcalendar.js"></script>
     <script type="text/javascript" src="../Scripts/FullCalendar/gcal.js"></script>
     <link type="text/css" href="../Styles/Agenda.css" rel="stylesheet" />
-    <script type="text/javascript" src="../Scripts/FullCalendar/Agenda.js"></script>
+    <script type="text/javascript" src="../Scripts/FullCalendar/ADNWAgendaPlugIn.js"></script>
         <script type="text/javascript">
             $(window).ready(
             function () {
@@ -39,7 +39,7 @@
                     }
 
                 });
-                LoadAgenda();
+                $('#agenda').Agenda();
             });
     </script>
     <style type="text/css">

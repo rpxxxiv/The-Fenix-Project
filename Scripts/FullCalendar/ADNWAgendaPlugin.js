@@ -1,29 +1,56 @@
-﻿var fc = $.fullCalendar;
+﻿/*
+ADNWAgendaPlugIn.Js
+Copyright (C) 2012  Andrew Ferrante
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+*/
+
+
+var fc = $.fullCalendar;
 var formatDate = fc.formatDate;
 var parseISO8601 = fc.parseISO8601;
 var addDays = fc.addDays;
 var applyAll = fc.applyAll;
 
-function LoadAgenda() {
 
-    var data = $.extend({}, {}, {
-//        'start-min': formatDate(start, 'u'),
-//        'start-max': formatDate(end, 'u'),
-        'singleevents': true,
-        'futureevents': true,
-        'orderby': 'starttime',
-        'sortorder':'ascending',
-        'max-results': 9999
-    });
+(function ($, undefined) {
 
-//    var ctz = sourceOptions.currentTimezone;
-//    if (ctz) {
-//        data.ctz = ctz = ctz.replace(' ', '_');
-//    }
+var options;
+var gcDefaults = {
+    'singleevents': true,
+    'futureevents': true,
+    'orderby': 'starttime',
+    'sortorder':'ascending',
+    'max-results': 9999
+}    
+    
+
+
+var ProxyDefaults = {
+    theme:'Styles/Agenda.css',
+    url:'http://www.google.com/calendar/feeds/rpxxxiv@gmail.com/public/full?alt=json-in-script&callback=?'
+}
+
+$.fn.Agenda = function(opts)
+{
+options = $.extend(true,{}, ProxyDefaults, opts);
     $.ajax({
-        url: 'http://www.google.com/calendar/feeds/rpxxxiv@gmail.com/public/full?alt=json-in-script&callback=?',
+        url: options.url,
         dataType: 'jsonp',
-        data: data,
+        data: gcDefaults,
         startParam: false,
         endParam: false,
         success: function (data) {
@@ -33,7 +60,6 @@ function LoadAgenda() {
                     events.push(jsonCreateCalendarItem(entry));
                 });
             }
-            //            events.sort(function (a, b) { return new Date(a.StartDateSort) - new Date(b.StartDateSort); });
             $("#Event").tmpl(events).appendTo("#Events");
 
             $(".EventItem").click(function (data) {
@@ -79,9 +105,6 @@ function LoadAgenda() {
         var calItem = new Object();
         calItem.title = $('title', entry).text();
         calItem.content = $('content', entry).text();
-//        var dateObj = $('gd\\:when', entry);
-        //        calItem.sd = $(entry).find("gd\\:when").attr('startTime');  //$('gd\:when',entry).attr('startTime');
-
         if ($(entry).find("gd\\:when")) {
             var sd = new Date($(entry).find("gd\\:when").attr('startTime'));
             var ed = new Date($(entry).find("gd\\:when").attr('endTime'));
@@ -102,3 +125,4 @@ function LoadAgenda() {
         return calItem;
     }
 }
+})(jQuery)
