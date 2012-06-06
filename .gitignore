@@ -27,13 +27,7 @@ obj/
 [Rr]elease*/
 _ReSharper*/
 [Tt]est[Rr]esult*
-bin/TheFenixProject.dll
-bin/TheFenixProject.dll
-bin/TheFenixProject.dll
-bin/TheFenixProject.pdb
-bin/TheFenixProject.pdb
-bin/TheFenixProject.pdb
-.gitignore
 *.dll
 *.pdb
-TheFenixProject.Publish.xml
+*.Publish.xml
+
