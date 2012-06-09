@@ -230,6 +230,7 @@
     <Content Include="Content\Images\th_JeffOtto-1.jpg" />
     <Content Include="Controls\Guestbook\ADNWGuestbook.htm" />
     <Content Include="Controls\Guestbook\GuestbookEntry.htm" />
+    <Content Include="Controls\ImageViewer\ImageAlbumItem.htm" />
     <Content Include="Controls\ImageViewer\ImageViewer.htm" />
     <Content Include="Pages\LegalFooter.html" />
     <Content Include="Pages\Members\FenixSanders.htm" />
@@ -240,7 +241,7 @@
     <Content Include="Pages\Members\Members.html" />
     <Content Include="Scripts\content.js" />
     <Content Include="Scripts\ControlProxies\ADNWGuestbookPlugIn.js" />
-    <Content Include="Scripts\ControlProxies\ADNWImageViewer.js" />
+    <Content Include="Scripts\ControlProxies\ADNWImageViewerPlugIn.js" />
     <Content Include="Scripts\FullCalendar\ADNWAgendaPlugin.js" />
     <Content Include="Scripts\FullCalendar\fullcalendar.js" />
     <Content Include="Scripts\FullCalendar\fullcalendar.min.js" />

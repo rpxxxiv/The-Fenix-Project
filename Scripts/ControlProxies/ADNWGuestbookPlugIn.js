@@ -29,13 +29,13 @@
 
     var ProxyDefaults = {
         Id: '',
+        returnType: '$format=json',
         url: 'http://www.artistdevelopmentnw.com/adnwservicetest/ADNWClientApplicationWebServices.svc/',
         clientApp: 'ClientApplications'
     }
     var gbDefaults = {
         theme: 'Styles/Guestbook.css',
         entity: 'ADNWGuestbooks/ADNWGuestbookEntries',
-        returnType:'$format=json',
         guestbookTemplate: '../Controls/Guestbook/ADNWGuestbook.htm',
         guestbookEntryTemplate: '../Controls/Guestbook/GuestbookEntry.htm'
     }
@@ -60,18 +60,7 @@
     function GuestbookManager(Source) {
         options = Source.options;
         var element = Source.element;
-        if ($('#GB').html()) {
-        }
-        else {
-            $.get(options.guestbookTemplate, function (template) {
-                $('body').append(template);
-                ($(element)).remove();
-                $('#GB').tmpl().appendTo('body');
-                $('#btnSubmit').click(function () {
-                    SaveGuestbookEntry($('#Sign :input'), SaveGuestbookEntryCompleted, null);
-                });
-            });
-        }
+        GetGuestbookTemplates(element);
         GetGuestbookEntries(options);
     }
 
@@ -101,7 +90,7 @@
     }
 
     var $gbDto = function (Entry) {
-        var entry = new Object()
+        var entry = new Object();
         entry.ADNWGuestbookId = GuestbookId;
         entry.GuestName = Entry.GuestName;
         entry.GuestComment = Entry.GuestComment;
@@ -130,14 +119,12 @@
         var gbEntryTemplate = $('#GBEntry').html();
         if (gbEntryTemplate) {
             $('#gbRight').empty();
-            $('#GBEntry').tmpl(entries).appendTo('#gbRight');
+
         }
         else {
-            $.get(options.guestbookEntryTemplate, function (template) {
-                $('body').append(template);
-                $('#GBEntry').tmpl(entries).appendTo('#gbRight');
-            });
+            GetGuesbookTemplates(null);
         }
+        $('#GBEntry').tmpl(entries).appendTo('#gbRight');
     }
 
     function SaveGuestbookEntry(data, successCallback, errorCallback) {
@@ -189,10 +176,27 @@
         var valid = false;
 
         if (data.GuestName.length > 0 && data.GuestEmail.length > 0) {
-            
+
             return true;
         }
         alert('Please Entry your Name and Email to sign the Guestbook');
         return valid;
+    }
+
+    function GetGuestbookTemplates(element) {
+        if ($('#GB').html()) {
+        }
+        else {
+            $.get(options.guestbookTemplate, function (template) {
+                $('body').append(template);
+                if ($(element)) {
+                    ($(element)).remove();
+                }
+                $('#GB').tmpl().appendTo('body');
+                $('#btnSubmit').click(function () {
+                    SaveGuestbookEntry($('#Sign :input'), SaveGuestbookEntryCompleted, null);
+                });
+            });
+        }
     }
 })(jQuery)

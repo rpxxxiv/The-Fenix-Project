@@ -1,4 +1,12 @@
-﻿<script id="GB" type="text/x-jquery-tmpl">
+﻿<script id="GBEntry" type="text/x-jquery-tmpl">
+    <div class="EventItem">
+        <p><span class="EventTitle">${GuestName}</span></p>
+        <p><span class="EventDateTime">${DateAdded}</span></p>
+        <p><span class="EventDateTime">${GuestComment}</span></p>
+        <hr />
+    </div>
+</script>
+<script id="GB" type="text/x-jquery-tmpl">
 <div id="gbLayoutRoot">
 <div id="gbLeft">    
     <form id="Sign">
@@ -14,7 +22,7 @@
                     <input type="email" name="GuestEmail" />
                 </li>
                 <li style="font-size:80%;">
-                    <input type="checkbox" title="Get updates from The Fenix Project and ADNW." name="Subscribe" />Get updates from The Fenix Project and ADNW.
+                    <input type="checkbox" title="Get updates from The Fenix Project and ADNW." name="Subscribe" checked="checked" />Get updates from The Fenix Project and ADNW.
                 </li>
                 <li style="font-size:60%;">
                     By signing you agree to the Artist Development Northwest <a href="#">Privacy Policy.</a>
