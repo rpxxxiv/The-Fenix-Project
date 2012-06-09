@@ -4,7 +4,6 @@
     padding:0;
     height:97%;
     width:90%;
-    color:goldenrod;
 }
 
 #gbLayoutRoot
@@ -103,3 +102,8 @@ form#Sign button
     color:goldenrod;
 }
 
+a
+{
+    font-size:100%;
+    text-decoration:underline;
+}
