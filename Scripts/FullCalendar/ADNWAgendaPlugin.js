@@ -34,7 +34,7 @@ var gcDefaults = {
     'futureevents': true,
     'orderby': 'starttime',
     'sortorder':'ascending',
-    'max-results': 9999
+    'max-results': 25
 }    
     
 
