@@ -1,12 +1,15 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title></title>
-</head>
-<body>
+﻿<script id="IV" type="text/x-jquery-tmpl">
 <div id="ivLayoutRoot">
     <div id="ivAlbumsDisplay"></div>
-    <div id="ivImagesDisplay"></div>
-</div>
-</body>
-</html>
+    <div id="ivImagesDisplay">
+        <ul></ul>
+    </div>
+</div
+</script>
+<script id="ivAlbum" type="text/x-jquery-tmpl">
+<div class="btnImageAlbum" data-uri="${uri}"><img src="../../Content/${coverArt.ThumbAddress}" /></div>
+</script>
+<script id="ivImage" type="text/x-jquery-tmpl">
+    <li class="imageHolder"><img src="../../Content/${Thumb}" class="image" height="100%" width="100%"/></li>
+</script>
+

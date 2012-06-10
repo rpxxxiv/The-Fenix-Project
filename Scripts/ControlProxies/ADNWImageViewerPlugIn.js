@@ -33,8 +33,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     var ilDefaults = {
         theme: 'Styles/ImageLibrary',
         entity: 'ImageLibraries/ImageAlbums/Images',
-        ImageViewerTemplate: '../Controls/ImageViewer/ImageViewer.htm',
-        ImageViewerImageTemplate: '../Controls/ImageViewer/GuestbookEntry.htm'
+        ImageViewerTemplate: '../../Controls/ImageViewer/ImageViewer.htm',
+        ImageViewerImageTemplate: ''
     }
     $.fn.ImageLibrary = function (options) {
         options = $.extend(true, {}, ProxyDefaults, ilDefaults, options);
@@ -125,9 +125,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
         $('#ivAlbumsDisplay').empty();
         //Initialize Albums
-        var template = "<div class=\"btnImageAlbum\" data-uri=\"${uri}\"><img src=\"../../Content/${coverArt.ThumbAddress}\" /></div>";
-        $.tmpl(template, Albums).appendTo('#ivAlbumsDisplay');
+        //        var template = "<div class=\"btnImageAlbum\" data-uri=\"${uri}\"><img src=\"../../Content/${coverArt.ThumbAddress}\" /></div>";
+        //        $.tmpl(template, Albums).appendTo('#ivAlbumsDisplay');
 
+        $('#ivAlbum').tmpl(Albums).appendTo('#ivAlbumsDisplay');
         $('.btnImageAlbum').click(function () {
             var o = $(this).data("uri");
             GetAlbumImages(o);
@@ -141,7 +142,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         }
 
         $('#ivImagesDisplay>ul').empty();
-        $('#ImageViewerImage').tmpl(Images).appendTo('#ivImagesDisplay>ul');
+        $('#ivImage').tmpl(Images).appendTo('#ivImagesDisplay>ul');
 
     }
     function GetAlbumImages(uri) {
@@ -176,6 +177,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     }
 
     function GetImageLibraryTemplates(element) {
-
+        if ($('#IV').html()) {
+        }
+        else {
+            $.get(options.ImageViewerTemplate, function (template) {
+                $('body').append(template);
+                if ($(element)) {
+                    ($(element)).remove();
+                }
+                $('#IV').tmpl().appendTo('body');
+            });
+        }
     }
 })(jQuery)
