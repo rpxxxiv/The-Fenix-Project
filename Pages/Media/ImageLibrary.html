@@ -17,13 +17,44 @@
             }
         )
     </script>
+    <style>
+        .btnImageAlbum
+        {
+            float:left;   
+        }
+        #ivImagesDisplay
+        {
+            width:650px;
+            height:650px;
+            border:2px solid black;    
+        }
+        #ivImagesDisplay
+        {
+            list-style-type:none;   
+            height:100%;   
+        }
+        .imageHolder
+        {
+            padding:5px;
+            margin:5px;
+            border:1px solid black;
+            height:75px;
+            width:75px;   
+            float:left;
+        }
+    </style>
 </head>
 <body>
+<script id="ImageViewerImage" type="text/x-jquery-tmpl">
+    <li class="imageHolder"><img src="../../Content/${Thumb}" class="image"/></li>
+</script>
 <button type="button" id="btnSubmit" title="Click">Refresh</button>
 <div id="ImageLibrary"></div>
 <div id="ivLayoutRoot">
     <div id="ivAlbumsDisplay"></div>
-    <div id="ivImagesDisplay"></div>
+    <div id="ivImagesDisplay">
+        <ul></ul>
+    </div>
 </div>
 </body>
 </html>

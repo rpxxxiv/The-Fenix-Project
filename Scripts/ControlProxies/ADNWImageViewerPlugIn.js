@@ -91,22 +91,28 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     var ilAlbumDto = function (Album) {
         var album = new Object();
         album.Id = Album.ImageAlbumId;
-        album.uri = Album.__metadata.uri;
+        album.uri = Album.__metadata.uri + '/Images?' + options.returnType;
         album.Name = Album.ImageAlbumName;
         album.DateAdded;
         var edate = Album.DateAdded;
         if (edate) {
             album.DateAdded = new Date(parseInt(edate.substr(6)));
         }
-
         album.coverArt = Album.Images[Math.floor(Math.random() * Album.Images.length)];
-
         return album;
 
     }
 
     var ilImageDto = function (Image) {
+        var image = new Object();
+        image.Id = Image.ImageId;
+        image.Address = Image.ImageAddress;
+        image.Thumb = Image.ThumbAddress;
+        image.Caption = Image.Description;
+        image.DateAdded = Image.DateAdded;
+        image.Photographer = Image.Photographer;
 
+        return image;
     }
     function LoadImageLibraryAlbums(imageLibrarySource, options, element) {
         var Albums = [];
@@ -115,32 +121,52 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             Albums.push(ilAlbumDto(albums[i]));
         }
 
+
+
         $('#ivAlbumsDisplay').empty();
-        //Initial First Album
-        var template = "<div class=\"btnImageAlbum\"><img src=\"../../Content/${coverArt.ThumbAddress}\" /></div>";
-
+        //Initialize Albums
+        var template = "<div class=\"btnImageAlbum\" data-uri=\"${uri}\"><img src=\"../../Content/${coverArt.ThumbAddress}\" /></div>";
         $.tmpl(template, Albums).appendTo('#ivAlbumsDisplay');
-        //$('#ivAlbumsDisplay')
+
+        $('.btnImageAlbum').click(function () {
+            var o = $(this).data("uri");
+            GetAlbumImages(o);
+        });
     }
-    //        $.ajax({
-    //            type: "GET",
-    //            url: options.url,
-    //            contentType: "application/json; charset=utf-8",
-    //            dataType: "json",
-    //            success: function (msg) { CreateImageLibrary(msg.d, options, element); },
-    //            error: function (xhr, ajaxOptions, thrownError) {
-    //                alert(xhr.status);
-    //                alert(thrownError);
-    //            }
-    //        });
+    function LoadAlbumImages(ImageSource) {
+        var Images = [];
+        var images = ImageSource;
+        for (var i = 0; i < images.length; i++) {
+            Images.push(ilImageDto(images[i]));
+        }
 
-
-
-    function LoadAlbumImages(imagesSource) {
+        $('#ivImagesDisplay>ul').empty();
+        $('#ImageViewerImage').tmpl(Images).appendTo('#ivImagesDisplay>ul');
 
     }
-    function GetAlbumImages(albumnId) {
+    function GetAlbumImages(uri) {
+        if ($.browser.msie && window.XDomainRequest) {
+            var xdr = new XDomainRequest();
+            xdr.open("get", uri);
+            xdr.onload = function () {
+                var JSON = $.parseJSON(xdr.responseText);
+                if (JSON == null || typeof (JSON) == 'undefined') {
+                    JSON = $.parseJSON(data.firstChild.textContent);
+                }
+                LoadAlbumImages(JSON.d);
+            }
+            xdr.send();
 
+        }
+        else {
+            $.getJSON(
+                uri,
+                function (msg) {
+                    LoadAlbumImages(msg.d);
+                }).error(function (jqXHR, textStatus, errorThrown) {
+                    alert('Error:' + textStatus + '  Message:' + errorThrown);
+                });
+        }
     }
     function LoadImageFromAlbum(imageSource) {
 
@@ -148,29 +174,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     function GetImageFromAlbum(imageId) {
 
     }
-
-    function CreateImageLibrary(guestbookSource, options, element) {
-        var entries = [];
-        var iLibrary = guestbookSource.ImageLibraries[0].ImageAlbums;
-    }
-    //        for (var i = 0; i < gbooks.ADNWGuestbookEntries.length; i++) {
-    //            entries.push($gbDto(gbooks.ADNWGuestbookEntries[i]));
-
-    //        }
-    //        $.get('Themes/ADNWGuestbook.htm', function (template) {
-    //            $('body').append(template);
-
-    //            $('#GB').tmpl().appendTo('body');
-    //            ($(element)).replaceWith('#GB');
-    //        });
-    //        $.get('Themes/GuestbookEntry.htm', function (template) {
-    //            $('body').append(template);
-    //            $('#GBEntry').tmpl(entries).appendTo('#gbRight');
-    //        });
-
-
-
-
 
     function GetImageLibraryTemplates(element) {
 
