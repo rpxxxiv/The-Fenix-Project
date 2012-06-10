@@ -22,16 +22,28 @@
         {
             float:left;   
         }
-        #ivImagesDisplay
+        #ivAlbumsDisplay
         {
-            width:650px;
-            height:650px;
-            border:2px solid black;    
+            position:fixed;
+            top:0;
+            left:0;
+            margin-right:auto;
+            height:20%;
         }
         #ivImagesDisplay
         {
-            list-style-type:none;   
-            height:100%;   
+            position:fixed;
+            top:21%;
+            left:0;
+            margin-right:auto;
+            width:650px;
+            height:650px;
+            border:2px solid black; 
+            clear:both;
+            list-style-type:none;
+            overflow:scroll;
+            overflow-x:none;
+            
         }
         .imageHolder
         {
@@ -46,7 +58,7 @@
 </head>
 <body>
 <script id="ImageViewerImage" type="text/x-jquery-tmpl">
-    <li class="imageHolder"><img src="../../Content/${Thumb}" class="image"/></li>
+    <li class="imageHolder"><img src="../../Content/${Thumb}" class="image" height="100%" width="100%"/></li>
 </script>
 <button type="button" id="btnSubmit" title="Click">Refresh</button>
 <div id="ImageLibrary"></div>
