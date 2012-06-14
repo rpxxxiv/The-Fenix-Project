@@ -25,28 +25,33 @@ var parseISO8601 = fc.parseISO8601;
 var addDays = fc.addDays;
 var applyAll = fc.applyAll;
 
+var maxResults = 25;
 
 (function ($, undefined) {
 
 var options;
+
+
 var gcDefaults = {
     'singleevents': true,
     'futureevents': true,
     'orderby': 'starttime',
     'sortorder':'ascending',
-    'max-results': 25
+    'max-results': maxResults
 }    
     
 
 
 var ProxyDefaults = {
     theme:'Styles/Agenda.css',
-    url:'http://www.google.com/calendar/feeds/rpxxxiv@gmail.com/public/full?alt=json-in-script&callback=?'
+    url:'http://www.google.com/calendar/feeds/rpxxxiv@gmail.com/public/full?alt=json-in-script&callback=?',
+    maxResults: 25
 }
 
 $.fn.Agenda = function(opts)
 {
-options = $.extend(true,{}, ProxyDefaults, opts);
+options = $.extend(true,{},ProxyDefaults, opts);
+    gcDefaults['max-results'] = options.maxResults;
     $.ajax({
         url: options.url,
         dataType: 'jsonp',

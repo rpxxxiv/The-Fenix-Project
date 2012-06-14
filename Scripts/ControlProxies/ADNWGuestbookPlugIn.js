@@ -1,5 +1,4 @@
 ﻿
-
 /*
     ADNWGuestbookPlugIn.Js
     Copyright (C) 2012  Andrew Ferrante

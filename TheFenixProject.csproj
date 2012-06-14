@@ -229,8 +229,6 @@
     <Content Include="Content\Images\th_Fred-1.jpg" />
     <Content Include="Content\Images\th_JeffOtto-1.jpg" />
     <Content Include="Controls\Guestbook\ADNWGuestbook.htm" />
-    <Content Include="Controls\Guestbook\GuestbookEntry.htm" />
-    <Content Include="Controls\ImageViewer\ImageAlbumItem.htm" />
     <Content Include="Controls\ImageViewer\ImageViewer.htm" />
     <Content Include="Pages\LegalFooter.html" />
     <Content Include="Pages\Members\FenixSanders.htm" />
@@ -246,12 +244,14 @@
     <Content Include="Scripts\FullCalendar\fullcalendar.js" />
     <Content Include="Scripts\FullCalendar\fullcalendar.min.js" />
     <Content Include="Scripts\FullCalendar\gcal.js" />
+    <Content Include="Scripts\Home.js" />
     <Content Include="Scripts\html5shiv-printshiv.js" />
     <Content Include="Scripts\html5shiv.js" />
     <Content Include="Scripts\Members.js" />
     <Content Include="Styles\Agenda.css" />
     <Content Include="Styles\Calendar\fullcalendar.css" />
     <Content Include="Styles\Guestbook.css" />
+    <Content Include="Styles\Home.css" />
     <Content Include="Styles\Layout\1AboutUsLogo.png" />
     <Content Include="Styles\Layout\1ADNWLogo.png" />
     <Content Include="Styles\Layout\1BlueDiamondLogo.png" />
