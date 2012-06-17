@@ -265,6 +265,7 @@
     <Content Include="Styles\Layout\ADNWLogo.png" />
     <Content Include="Styles\Layout\BlueDiamondLogo.png" />
     <Content Include="Styles\Layout\ContactLogo.png" />
+    <Content Include="Styles\Layout\events.jpg" />
     <Content Include="Styles\Layout\EventsLogo.png" />
     <Content Include="Styles\Layout\FacebookLogo.png" />
     <Content Include="Content\Images\FenixandWorth.jpg" />
@@ -287,6 +288,7 @@
     <Content Include="Pages\Media\VideoLibrary.html" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <Content Include="Styles\Content.css" />
+    <Content Include="Styles\Layout\fenixaboutus.jpg" />
     <Content Include="Styles\Layout\FenixGuestbookConcept.png" />
     <Content Include="Styles\Layout\FenixHeader.png" />
     <Content Include="Styles\Layout\FlamePageBreak.png" />

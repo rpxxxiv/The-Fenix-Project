@@ -15,7 +15,7 @@
     padding-top:30px;
 	direction: ltr;
 	text-align: left;
-	font-family:Cooper Black;
+	font-family:Prestige Elite Std;
 	}
 	
 .fc table {
@@ -127,16 +127,17 @@ html .fc,
 
 .fc-widget-header,    /* <th>, usually */
 .fc-widget-content {  /* <td>, usually */
-	border: 1px solid #3E3E76;
+	border: 1px solid black;
 	}
 
 
 .fc-widget-content:hover
 {
-background-color:rgba(62,62,118,0.3);
+/*background-color:rgba(62,62,118,0.3);*/
+border-color:#b80201;
 }	
 .fc-state-highlight { /* <td> today cell */ /* TODO: add .fc-today to <th> */
-	background: #ffc;
+	background: #b80201;
 	}
 	
 .fc-cell-overlay { /* semi-transparent rectangle while dragging */
@@ -223,34 +224,36 @@ background-color:rgba(62,62,118,0.3);
 	
 .fc-state-default,
 .fc-state-default .fc-button-inner {
-	border-style: solid;
+	/*border-style: solid;
 	border-color: #ccc #bbb #aaa;
 	background: #F3F3F3;
-	color: #000;
+	color: #000;*/
+	color:goldenrod;
 	}
 	
 .fc-state-hover,
 .fc-state-hover .fc-button-inner {
-	border-color: #999;
+	/*border-color: #999;*/
 	}
 	
 .fc-state-down,
 .fc-state-down .fc-button-inner {
-	border-color: #555;
-	background: #777;
+	border-color: black;
+	background: #b80201;
 	}
 	
 .fc-state-active,
 .fc-state-active .fc-button-inner {
-	border-color: #555;
+	/*border-color: black;
 	background: #777;
-	color: #fff;
+	color: #fff;*/
 	}
 	
 .fc-state-disabled,
 .fc-state-disabled .fc-button-inner {
-	color: #999;
-	border-color: #ddd;
+	/*color: #999;
+	border-color: #ddd;*/
+	color:goldenrod;
 	}
 	
 .fc-state-disabled {
@@ -287,9 +290,10 @@ a.fc-event {
 	}
 	
 .fc-event-skin {
-	border-color: #36c;     /* default BORDER color */
-	background-color: #36c; /* default BACKGROUND color */
-	color: #fff;            /* default TEXT color */
+	/*border-color: #36c;     /* default BORDER color */
+	/*background-color: #36c; /* default BACKGROUND color */
+	color: goldenrod;            /* default TEXT color */
+	font-size: 80%;
 	}
 	
 .fc-event-inner {
