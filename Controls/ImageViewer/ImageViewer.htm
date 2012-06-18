@@ -7,9 +7,14 @@
 </div
 </script>
 <script id="ivAlbum" type="text/x-jquery-tmpl">
-<div class="btnImageAlbum" data-uri="${uri}"><img src="../../Content/${coverArt.ThumbAddress}" /></div>
+<div class="btnImageAlbum" data-uri="${uri}"><span>${Name}</span></div>
 </script>
 <script id="ivImage" type="text/x-jquery-tmpl">
-    <li class="imageHolder"><img src="../../Content/${Thumb}" class="image" height="100%" width="100%"/></li>
+    <li class="imageHolder" data-caption="${Caption}" data-photographer="${Photographer}" data-address="${Address}"><img src="../../Content/${Thumb}" class="image" height="100%" width="100%"/></li>
 </script>
-
+<!--<script id="ivImageDisplay" type="text/x-jquery-tmpl">
+//    <div id="ImageDisplay">
+//        <img src="../../Content/${
+//    </div>
+</script>
+-->
