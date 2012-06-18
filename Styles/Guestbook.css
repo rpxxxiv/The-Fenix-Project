@@ -3,7 +3,7 @@
     margin:0;
     padding:0;
     height:97%;
-    width:90%;
+    width:90%;    
 }
 
 #gbLayoutRoot
@@ -16,6 +16,8 @@
     background-repeat:no-repeat;
     background-size:100% 100%;
     margin-top:1%;
+    opacity:0.9;
+    filter:alpha(opacity=90);
 }
 
 #gbLeft
