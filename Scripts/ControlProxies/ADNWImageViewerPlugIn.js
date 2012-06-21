@@ -143,7 +143,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
         $('#ivImagesDisplay>ul').empty();
         $('#ivImage').tmpl(Images).appendTo('#ivImagesDisplay>ul');
-
+        $('.imageHolder').click(function (d) {
+            //var image = $.parseJSON($(this).data("imgdata")); //ilImageDto($(this).data("imgdata"));
+            var photographer = $(this).data("photographer");
+            var address = $(this).data("address");
+            var caption = $(this).data("caption");
+            
+        });
     }
     function GetAlbumImages(uri) {
         if ($.browser.msie && window.XDomainRequest) {

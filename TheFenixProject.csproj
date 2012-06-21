@@ -291,6 +291,7 @@
     <Content Include="Styles\Layout\fenixaboutus.jpg" />
     <Content Include="Styles\Layout\FenixGuestbookConcept.png" />
     <Content Include="Styles\Layout\FenixHeader.png" />
+    <Content Include="Styles\Layout\FenixImageViewerButton.png" />
     <Content Include="Styles\Layout\FlamePageBreak.png" />
     <Content Include="Styles\Layout\GalleryLogo.png" />
     <Content Include="Styles\Layout\GuestbookLogo.png" />
