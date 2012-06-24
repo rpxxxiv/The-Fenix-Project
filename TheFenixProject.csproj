@@ -119,6 +119,16 @@
     <Content Include="Content\Images\DSC_0152-1.jpg" />
     <Content Include="Content\Images\DSC_0158-1.jpg" />
     <Content Include="Content\Images\DSC_0173-1.jpg" />
+    <Content Include="Content\Images\DSC_1134-1.jpg" />
+    <Content Include="Content\Images\DSC_1136-1.jpg" />
+    <Content Include="Content\Images\DSC_1136-2.jpg" />
+    <Content Include="Content\Images\DSC_1152-1.jpg" />
+    <Content Include="Content\Images\DSC_1152-2.jpg" />
+    <Content Include="Content\Images\DSC_1156-1.jpg" />
+    <Content Include="Content\Images\DSC_1157-1.jpg" />
+    <Content Include="Content\Images\DSC_1159-1.jpg" />
+    <Content Include="Content\Images\DSC_1368-1.jpg" />
+    <Content Include="Content\Images\DSC_1368-2.jpg" />
     <Content Include="Content\Images\DSC_2262-1.jpg" />
     <Content Include="Content\Images\DSC_7077-2.jpg" />
     <Content Include="Content\Images\DSC_7201-1.jpg" />
@@ -202,6 +212,16 @@
     <Content Include="Content\Images\th_DSC_0152-1.jpg" />
     <Content Include="Content\Images\th_DSC_0158-1.jpg" />
     <Content Include="Content\Images\th_DSC_0173-1.jpg" />
+    <Content Include="Content\Images\th_DSC_1134-1.jpg" />
+    <Content Include="Content\Images\th_DSC_1136-1.jpg" />
+    <Content Include="Content\Images\th_DSC_1136-2.jpg" />
+    <Content Include="Content\Images\th_DSC_1152-1.jpg" />
+    <Content Include="Content\Images\th_DSC_1152-2.jpg" />
+    <Content Include="Content\Images\th_DSC_1156-1.jpg" />
+    <Content Include="Content\Images\th_DSC_1157-1.jpg" />
+    <Content Include="Content\Images\th_DSC_1159-1.jpg" />
+    <Content Include="Content\Images\th_DSC_1368-1.jpg" />
+    <Content Include="Content\Images\th_DSC_1368-2.jpg" />
     <Content Include="Content\Images\th_DSC_2262-1.jpg" />
     <Content Include="Content\Images\th_DSC_7077-2.jpg" />
     <Content Include="Content\Images\th_DSC_7201-1.jpg" />
@@ -314,6 +334,7 @@
     <Folder Include="Content\Videos\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Content\Images\Thumbs.db" />
     <None Include="Fonts\batmfa_.ttf" />
     <None Include="Fonts\batmfa_.woff" />
     <None Include="Fonts\bm.eot" />
