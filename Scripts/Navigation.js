@@ -39,19 +39,51 @@ function MapLinkEvent(btn, iframe) {
     }
 
     $(btn).click(function (e) {
+
         if (isOutOfDomain) {
             e.preventDefault();
+            //var title = $(btn).
             $frm.animate(
             { opacity: 0 },
             toggleSpeed,
                 function () {
+                    //Load Frame
                     $frm.delay(300);
                     $frm.empty();
                     $frm.attr("src", a);
 
+
                 });
+            var txt = $(this).text().indexOf('Media');
+            if ($(this).text().indexOf('Media') >= 0) {
+                var b = $('body');
+                if ($('#IV') != 'undefined') {
+                    $.get('/Controls/ImageViewer/ImageViewer.htm',
+                            function (template) {
+                                $('body').append(template);
+                                $('#ivImageDisplay').tmpl().appendTo('body');
+                                $('#ImageDisplay').css(
+                                    { 'position': 'fixed',
+                                        'top': '0',
+                                        'left': '0',
+                                        'height': '100%',
+                                        'width': '100%',
+                                        'margin': '0',
+                                        'padding': '0',
+                                        'display': 'none'
+                                    }
+            );
+                            });
+                }
+            }
+            else {
+                if ($('#IV')) {
+                    $('#IV').remove();
+                }
+            }
         }
     });
+
 }
 
 function NavUriMapper(link) {
