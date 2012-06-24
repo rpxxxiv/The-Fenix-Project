@@ -148,7 +148,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             var photographer = $(this).data("photographer");
             var address = $(this).data("address");
             var caption = $(this).data("caption");
-            
+
         });
     }
     function GetAlbumImages(uri) {
@@ -192,6 +192,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
                     ($(element)).remove();
                 }
                 $('#IV').tmpl().appendTo('body');
+
+                //$('#ivImageDisplay').tmpl().prependTo('body', window.parent.parent.parent.document);
             });
         }
     }
