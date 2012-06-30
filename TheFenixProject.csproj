@@ -257,6 +257,7 @@
     <Content Include="Pages\Members\JefferyOtto.htm" />
     <Content Include="Pages\Members\JeffFrankel.htm" />
     <Content Include="Pages\Members\Members.html" />
+    <Content Include="Pages\Members\MilesThompson.htm" />
     <Content Include="Scripts\content.js" />
     <Content Include="Scripts\ControlProxies\ADNWGuestbookPlugIn.js" />
     <Content Include="Scripts\ControlProxies\ADNWImageViewerPlugIn.js" />
