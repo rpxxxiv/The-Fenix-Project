@@ -34,6 +34,8 @@
             $("#nav").removeClass('noJquery');
             SetLinkEvents($('#nav'), $('#navFrame'));
 
+
+
             $('.btnNav').each(
                     function () {
                         $(this).hover(
@@ -44,6 +46,16 @@
                                 $(this).delay(2000).animate({ 'margin-left': '-135px' }, 500);
                             });
                     });
+            $('.btnImages').click(
+                    function (e) {
+                        e.preventDefault();
+                        $('.frmIL').attr('src', "Pages/Media/ImageLibrary.html");
+                        $('.ImageLibrary').fadeIn(1000);
+                    });
+            $('#close').click(
+                    function () {
+                        $('.ImageLibrary').fadeOut(1000);
+                    });
 
         });
     </script>
@@ -52,9 +64,19 @@
 <![endif]-->
 </head>
 <body>
+<!-- Image Library Feature -->
+<div class="ImageLibrary">
+    <div class="ImageLibraryBackground"></div>
+    <iframe class="frmIL"></iframe>
+    <div id="close">X</div>
+</div>
+
+<!-- Local Templates -->
 <script type="text/x-jquery-tmpl" id="navButton">
     <li class="btnNav"><a href="${Page}" target={{if InDomain}} "navFrame" {{else}} "_blank" {{/if}}><div style="float:left;">${Title}<img src="${Icon}" /></div></a></li>
 </script>
+
+<!-- Page Content Displayed -->
 <div id="banner">
     <div id="header" class="Shadow"><img src="Styles/Layout/FenixHeader.png" /></div>
 </div>

@@ -5,7 +5,7 @@
     { Title: "Contact", Icon: "Styles/Layout/ContactLogo.png", Page: "Pages/Contact.html", InDomain: true},
     { Title: "Events", Icon: "Styles/Layout/EventsLogo.png", Page: "Pages/Events.html", InDomain: true},
     { Title: "Guestbook", Icon: "Styles/Layout/GuestbookLogo.png", Page: "Pages/Guestbook.html", InDomain: true},
-    { Title: "Media", Icon: "Styles/Layout/GalleryLogo.png", Page: "Pages/Media/ImageLibrary.html", InDomain: true},
+    { Title: "Media", Icon: "Styles/Layout/GalleryLogo.png", Page: "Pages/empty.html", InDomain: true },
     //{ Title: "News", Icon: "Styles/Layout/NewLogo.png", Page: "Pages/News.html", InDomain: true},
     {Title: "Facebook", Icon: "Styles/Layout/FacebookLogo.png", Page: "http://www.facebook.com/profile.php?id=1664809096" },
     { Title: "ReverbNation", Icon: "Styles/Layout/ReverbNationLogo.png", Page: "http://www.reverbnation.com/thefenixproject"},
@@ -20,6 +20,10 @@ function SetLinkEvents(ullia, iframe) {
     $(ullia).find('a').each(
         function () {
             MapLinkEvent($(this), iframe);
+            if ($(this).text().indexOf('Media') >= 0) {
+                $(this).unbind('click');
+                $(this).addClass("btnImages");
+            }
         })
 }
 
@@ -32,18 +36,20 @@ function MapLinkEvent(btn, iframe) {
     var a = link;
     var expr = /http:|https:|mailto:/;
     var isOutOfDomain = link.toString().search(expr);
-
+    var isMedia = $(this).text().indexOf('Media');
     var inDomain = link.toString().search("Pages/");
     if (isOutOfDomain && inDomain) {
         a = NavUriMapper(link.replace('#', '').replace('.html', ''));
     }
 
+
+
+
     $(btn).click(function (e) {
 
         if (isOutOfDomain) {
             e.preventDefault();
-            //var title = $(btn).
-            $frm.animate(
+                $frm.animate(
             { opacity: 0 },
             toggleSpeed,
                 function () {
@@ -54,33 +60,6 @@ function MapLinkEvent(btn, iframe) {
 
 
                 });
-            var txt = $(this).text().indexOf('Media');
-            if ($(this).text().indexOf('Media') >= 0) {
-                var b = $('body');
-                if ($('#IV') != 'undefined') {
-                    $.get('/Controls/ImageViewer/ImageViewer.htm',
-                            function (template) {
-                                $('body').append(template);
-                                $('#ivImageDisplay').tmpl().appendTo('body');
-                                $('#ImageDisplay').css(
-                                    { 'position': 'fixed',
-                                        'top': '0',
-                                        'left': '0',
-                                        'height': '100%',
-                                        'width': '100%',
-                                        'margin': '0',
-                                        'padding': '0',
-                                        'display': 'none'
-                                    }
-            );
-                            });
-                }
-            }
-            else {
-                if ($('#IV')) {
-                    $('#IV').remove();
-                }
-            }
         }
     });
 

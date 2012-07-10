@@ -4,7 +4,7 @@
     <title></title>
     <script type="text/javascript" src="../../Scripts/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="../../Scripts/jquery.tmpl.min.js"></script>
-    <link type="text/css" href="../../Styles/Guestbook.css" rel="stylesheet" />
+
     <script type="text/javascript" src="../../Scripts/ControlProxies/ADNWImageViewerPlugIn.js"></script>
     <script type="text/javascript">
         $.support.cors = true;
@@ -18,11 +18,14 @@
         )
     </script>
     <style>
-        .btnImageAlbum
+        body
         {
-            height:75px;
+
+        }
+        .btnImageAlbumHeader
+        {
+            
             width:150px;
-            margin:10px;
             background-image:url('../../Styles/Layout/FenixImageViewerButton.png');
             background-position:top center;
             background-repeat:no-repeat;
@@ -30,7 +33,19 @@
             color:Goldenrod;
             font-size:150%;
             text-align:center;
-            float:left;   
+        }
+        .btnImageAlbum
+        {
+            
+            width:150px;
+            margin:5px;
+            background-image:url('../../Styles/Layout/FenixImageViewerButton.png');
+            background-position:top center;
+            background-repeat:no-repeat;
+            background-size:100%;
+            color:Goldenrod;
+            font-size:150%;
+            text-align:center;
         }
         .btnImageAlbum>span
         {
@@ -45,45 +60,75 @@
             margin-right:auto;
             height:20%;
         }
-        #ivImagesDisplay
+        #ivImagesDisplay>ul
         {
+            list-style-type:none;
             position:fixed;
             top:21%;
             left:0;
             margin-right:auto;
-            width:650px;
-            height:650px;
-            border:2px solid black; 
+            max-width:170px;
+            max-height:400px;
             clear:both;
-            list-style-type:none;
-            overflow:scroll;
-            overflow-x:none;
+            overflow:hidden;
             
         }
         .imageHolder
         {
-            padding:5px;
-            margin:5px;
-            border:1px solid black;
-            height:75px;
-            width:75px;   
+            height:45px;
+            width:45px;   
+            margin:2.5px;
             float:left;
+            position:relative;
+            
+            z-index:1;
+        }
+        .imageHolder :hover
+        {
+            height:60px;
+            width:60px;
+            margin:-5px;            
+            z-index:100;
         }
         .Display
         {
             position:fixed;
-            top:0;
-            left:0;
+            top:0;     
+            left:20%;  
+            height:100%;
+            padding:0;   
+        }
+        .image
+        {
+            vertical-align:middle;
+            height:100%;
+        }
+        .caption
+        {
+            position:absolute;
+            right:0%;
+            top:50%;
+            border:5px solid white;
+            max-height:300px;   
+            color:goldenrod;
+            background-color:Black;
+        }
+        .captionBackground
+        {
+            margin:0;
+            padding:0;
             height:100%;
             width:100%;
-            margin:0;
-            padding:0;   
-            background-color:Black;
+            background-color:Black;  
+            -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+            filter: alpha(opacity=90);
+            opacity:0.9;
+            z-index:-1;   
+            
         }
     </style>
 </head>
 <body>
-<button type="button" id="btnSubmit" title="Click">Refresh</button>
 <div id="ImageLibrary"></div>
 <!--<div id="ivLayoutRoot">
     <div id="ivAlbumsDisplay"></div>

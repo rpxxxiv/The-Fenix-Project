@@ -59,7 +59,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         options = Source.options;
         var element = Source.element;
         GetImageLibraryTemplates(element);
-        $('#btnSubmit').click(function () { GetImageLibraryAlbums(options); });
+//        $('#btnSubmit').click(function () {
+//            GetImageLibraryAlbums(options);
+//        });
         GetImageLibraryAlbums(options)
     }
 
@@ -108,8 +110,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         image.Id = Image.ImageId;
         image.Address = Image.ImageAddress;
         image.Thumb = Image.ThumbAddress;
-        image.Caption = Image.Description;
-        image.DateAdded = Image.DateAdded;
+        image.Caption = Image.ImageDescription;
+        var edate = Image.DateAdded; ;
+        if (edate) {
+            image.DateAdded = new Date(parseInt(edate.substr(6)));
+        }
         image.Photographer = Image.Photographer;
 
         return image;
@@ -127,12 +132,40 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         //Initialize Albums
         //        var template = "<div class=\"btnImageAlbum\" data-uri=\"${uri}\"><img src=\"../../Content/${coverArt.ThumbAddress}\" /></div>";
         //        $.tmpl(template, Albums).appendTo('#ivAlbumsDisplay');
-
+        $.tmpl('<div class="btnImageAlbumHeader"><span>Albums</span></div>').appendTo('#ivAlbumsDisplay');
         $('#ivAlbum').tmpl(Albums).appendTo('#ivAlbumsDisplay');
         $('.btnImageAlbum').click(function () {
             var o = $(this).data("uri");
+
+            //            $('#ivImagesDisplay>ul').empty()
+            //            var ivid = $('#ivImagesDisplay');
             GetAlbumImages(o);
         });
+    }
+
+    function GetAlbumImages(uri, element) {
+        if ($.browser.msie && window.XDomainRequest) {
+            var xdr = new XDomainRequest();
+            xdr.open("get", uri);
+            xdr.onload = function () {
+                var JSON = $.parseJSON(xdr.responseText);
+                if (JSON == null || typeof (JSON) == 'undefined') {
+                    JSON = $.parseJSON(data.firstChild.textContent);
+                }
+                LoadAlbumImages(JSON.d, element);
+            }
+            xdr.send();
+
+        }
+        else {
+            $.getJSON(
+                uri,
+                function (msg) {
+                    LoadAlbumImages(msg.d, element);
+                }).error(function (jqXHR, textStatus, errorThrown) {
+                    alert('Error:' + textStatus + '  Message:' + errorThrown);
+                });
+        }
     }
     function LoadAlbumImages(ImageSource) {
         var Images = [];
@@ -145,36 +178,23 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         $('#ivImage').tmpl(Images).appendTo('#ivImagesDisplay>ul');
         $('.imageHolder').click(function (d) {
             //var image = $.parseJSON($(this).data("imgdata")); //ilImageDto($(this).data("imgdata"));
-            var photographer = $(this).data("photographer");
-            var address = $(this).data("address");
-            var caption = $(this).data("caption");
-
+            var Image = new Object();
+            Image.Photographer = $(this).data("photographer");
+            Image.Address = $(this).data("address");
+            Image.Caption = $(this).data("caption");
+            Image.DateAdded = $(this).data("dateadded");
+            var prevImag = $('#ImageDisplay').html();
+            var prevCapt = $('#caption').html();
+            if (prevImag != null ||
+                prevCapt != null) {
+                $('#ImageDisplay').remove();
+                $('#caption').remove();
+            }
+            $('#ivImageDisplay').tmpl(Image).appendTo('#ivLayoutRoot');
+            $('#ivCaption').tmpl(Image).appendTo('#ivLayoutRoot');
         });
     }
-    function GetAlbumImages(uri) {
-        if ($.browser.msie && window.XDomainRequest) {
-            var xdr = new XDomainRequest();
-            xdr.open("get", uri);
-            xdr.onload = function () {
-                var JSON = $.parseJSON(xdr.responseText);
-                if (JSON == null || typeof (JSON) == 'undefined') {
-                    JSON = $.parseJSON(data.firstChild.textContent);
-                }
-                LoadAlbumImages(JSON.d);
-            }
-            xdr.send();
 
-        }
-        else {
-            $.getJSON(
-                uri,
-                function (msg) {
-                    LoadAlbumImages(msg.d);
-                }).error(function (jqXHR, textStatus, errorThrown) {
-                    alert('Error:' + textStatus + '  Message:' + errorThrown);
-                });
-        }
-    }
     function LoadImageFromAlbum(imageSource) {
 
     }
