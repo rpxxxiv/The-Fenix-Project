@@ -85,6 +85,42 @@ ul
     margin-bottom:auto;
 }
 
+#mediabar
+{
+    position:fixed;
+    right:0%;
+    height:100%;
+    width:15%;
+}
+
+#audioplayer
+{
+    top:10%;
+    height:15%;
+    background-color:Red;
+    background-position:top center;
+}
+
+#photoshoot
+{
+    padding-top:40%;
+    height:30%;
+    background-image: url('../Content/Images/th_101003CLJNSANDERSF48-2.jpg');
+    background-size:100% 100%;
+    background-position:center center;
+    background-repeat:no-repeat;
+}
+
+#liveshows
+{
+    padding-top:600%;
+    height:30%;
+    background-image: url('../Content/Images/th_DSC_0075-1.jpg');
+    background-size:100% 100%;
+    background-position:left center;
+    background-repeat:no-repeat;
+}
+
 #sideNav
 {
     position:fixed;

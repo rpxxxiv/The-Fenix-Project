@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheFenixProject", "TheFenixProject\TheFenixProject.csproj", "{4C2B9B1A-D19E-498D-9155-37ADA2C99959}"
+# Visual Web Developer Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheFenixProject", "TheFenixProject.csproj", "{4C2B9B1A-D19E-498D-9155-37ADA2C99959}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
