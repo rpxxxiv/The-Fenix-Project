@@ -141,11 +141,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             }
         }
 
-        $('#ivAlbumsDisplay').empty();
-        $.tmpl('<div class="btnImageAlbumHeader"><span>Albums</span></div>').appendTo('#ivAlbumsDisplay');
+        $('#ivAlbumsDisplay').empty();        
         $('#ivAlbum').tmpl(Albums).appendTo('#ivAlbumsDisplay');
         $('.btnImageAlbum').click(function () {
+            $('.btnImageAlbum').removeClass("CurrentAlbum");
             var o = $(this).data("uri");
+            $(this).addClass("CurrentAlbum");
             GetAlbumImages(o);
         });
         GetAlbumImages(album.uri);
