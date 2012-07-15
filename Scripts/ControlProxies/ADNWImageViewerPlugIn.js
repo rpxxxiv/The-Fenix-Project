@@ -109,14 +109,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     var ilImageDto = function (Image) {
         var image = new Object();
         image.Id = Image.ImageId;
-        image.Address = Image.ImageAddress;
+        image.address = Image.ImageAddress;
         image.Thumb = Image.ThumbAddress;
-        image.Caption = Image.ImageDescription;
+        image.caption = Image.ImageDescription;
         var edate = Image.DateAdded; ;
         if (edate) {
-            image.DateAdded = new Date(parseInt(edate.substr(6)));
+            image.dateadded = new Date(parseInt(edate.substr(6)));
         }
-        image.Photographer = Image.Photographer;
+        image.photographer = Image.Photographer;
 
         return image;
     }
@@ -134,28 +134,21 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         var album = Albums[0];
 
         if (id != 'undefined') {
-            for (var i=0; i < Albums.length; i++) {
+            for (var i = 0; i < Albums.length; i++) {
                 if (Albums[i].Id == id) {
                     album = Albums[i];
                 }
             }
         }
 
-
-        GetAlbumImages(album.uri);
         $('#ivAlbumsDisplay').empty();
-        //Initialize Albums
-        //        var template = "<div class=\"btnImageAlbum\" data-uri=\"${uri}\"><img src=\"../../Content/${coverArt.ThumbAddress}\" /></div>";
-        //        $.tmpl(template, Albums).appendTo('#ivAlbumsDisplay');
         $.tmpl('<div class="btnImageAlbumHeader"><span>Albums</span></div>').appendTo('#ivAlbumsDisplay');
         $('#ivAlbum').tmpl(Albums).appendTo('#ivAlbumsDisplay');
         $('.btnImageAlbum').click(function () {
             var o = $(this).data("uri");
-
-            //            $('#ivImagesDisplay>ul').empty()
-            //            var ivid = $('#ivImagesDisplay');
             GetAlbumImages(o);
         });
+        GetAlbumImages(album.uri);
     }
 
     function GetAlbumImages(uri, element) {
@@ -192,26 +185,35 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         $('#ivImagesDisplay>ul').empty();
         $('#ivImage').tmpl(Images).appendTo('#ivImagesDisplay>ul');
         $('.imageHolder').click(function (d) {
-            //var image = $.parseJSON($(this).data("imgdata")); //ilImageDto($(this).data("imgdata"));
-            var Image = new Object();
-            Image.Photographer = $(this).data("photographer");
-            Image.Address = $(this).data("address");
-            Image.Caption = $(this).data("caption");
-            Image.DateAdded = $(this).data("dateadded");
-            var prevImag = $('#ImageDisplay').html();
-            var prevCapt = $('#caption').html();
-            if (prevImag != null ||
-                prevCapt != null) {
-                $('#ImageDisplay').remove();
-                $('#caption').remove();
-            }
-            $('#ivImageDisplay').tmpl(Image).appendTo('#ivLayoutRoot');
-            $('#ivCaption').tmpl(Image).appendTo('#ivLayoutRoot');
+            LoadImageFromAlbum($(this).data());
         });
+        LoadImageFromAlbum(Images[0]);
     }
 
     function LoadImageFromAlbum(imageSource) {
-
+        //        var fields = {};
+        //        for (var i = 0; i < imageSource.length; i++) {
+        //            var k = imageSource[i];
+        //        }
+        //        //        $(imageSource).each(function () {
+        //        //            var f = this.name;
+        //        //            var v = $(this).val();
+        //        //        });
+        var d = imageSource;
+        var Image = new Object();
+        Image.Photographer = d.photographer;
+        Image.Address = d.address;
+        Image.Caption = d.caption;
+        Image.DateAdded = d.dateadded;
+        var prevImag = $('#ImageDisplay').html();
+        var prevCapt = $('#caption').html();
+        if (prevImag != null ||
+                prevCapt != null) {
+            $('#ImageDisplay').remove();
+            $('#caption').remove();
+        }
+        $('#ivImageDisplay').tmpl(Image).appendTo('#ivLayoutRoot');
+        $('#ivCaption').tmpl(Image).appendTo('#ivLayoutRoot');
     }
     function GetImageFromAlbum(imageId) {
 
