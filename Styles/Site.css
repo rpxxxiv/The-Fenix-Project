@@ -97,27 +97,29 @@ ul
 {
     top:10%;
     height:15%;
-    background-color:Red;
-    background-position:top center;
+    background-color:Red;                       /*THIS LINE NEEDS TO BE REMOVED ONCE AUDIO PLAYER IS PLACED ON SITE*/
+    background-position:center center;
 }
 
 #photoshoot
 {
-    padding-top:40%;
-    height:30%;
+    position:absolute;
+    top:25%;
+    height:25%;
     background-image: url('../Content/Images/th_101003CLJNSANDERSF48-2.jpg');
     background-size:100% 100%;
-    background-position:center center;
+    background-position:center right;
     background-repeat:no-repeat;
 }
 
 #liveshows
 {
-    padding-top:600%;
-    height:30%;
+    position:absolute;
+    top:60%;
+    height:25%;
     background-image: url('../Content/Images/th_DSC_0075-1.jpg');
     background-size:100% 100%;
-    background-position:left center;
+    background-position:center center;
     background-repeat:no-repeat;
 }
 
@@ -247,7 +249,8 @@ ul
     height:100%;
     width:100%;   
     display:none; 
-    z-index:50;  
+    z-index:50;
+    overflow:hidden; 
 }
 .ImageLibraryBackground
 {
@@ -269,7 +272,8 @@ ul
     height:100%;
     width:100%;
     margin:0;
-    padding:0;   
+    padding:0; 
+    border:none;  
 }
 #close
 {
@@ -278,8 +282,8 @@ ul
     top:10px;
     right:10px;
     float:right;
-    border:2px solid Red;
-    font-size:250%;
-    color:Red;
+    /*border:2px solid Red;*/
+    font-size:200%;
+    color:goldenrod;
     z-index:100;
 }
