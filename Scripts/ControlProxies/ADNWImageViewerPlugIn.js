@@ -112,7 +112,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         image.address = Image.ImageAddress;
         image.Thumb = Image.ThumbAddress;
         image.caption = Image.ImageDescription;
-        var edate = Image.DateAdded; ;
+        var edate = Image.DateAdded;
         if (edate) {
             image.dateadded = new Date(parseInt(edate.substr(6)));
         }
@@ -141,7 +141,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             }
         }
 
-        $('#ivAlbumsDisplay').empty();        
+        $('#ivAlbumsDisplay').empty();
         $('#ivAlbum').tmpl(Albums).appendTo('#ivAlbumsDisplay');
         $('.btnImageAlbum').click(function () {
             $('.btnImageAlbum').removeClass("CurrentAlbum");
@@ -205,7 +205,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         Image.Photographer = d.photographer;
         Image.Address = d.address;
         Image.Caption = d.caption;
-        Image.DateAdded = d.dateadded;
+        var edate = d.dateadded;
+        if (edate) {
+            Image.DateAdded = d.dateadded;
+            Image.Copyright = new Date(Image.DateAdded).getFullYear().toString();
+        }
+        else {
+            Image.DateAdded = '';
+            Image.Copyright = '';
+        }
+
+
         var prevImag = $('#ImageDisplay').html();
         var prevCapt = $('#caption').html();
         if (prevImag != null ||
