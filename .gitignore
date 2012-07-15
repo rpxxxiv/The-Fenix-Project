@@ -35,3 +35,4 @@ TheFenixProject.Publish.xml
 TheFenixProject.Publish.xml
 bin/TheFenixProject.pdb
 bin/TheFenixProject.dll
+*.db

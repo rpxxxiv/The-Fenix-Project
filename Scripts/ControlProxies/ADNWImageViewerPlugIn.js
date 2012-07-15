@@ -27,7 +27,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         Id: '',
         returnType: '$format=json',
         url: 'http://www.artistdevelopmentnw.com/adnwservicetest/ADNWClientApplicationWebServices.svc/',
-        clientApp: 'ClientApplications'
+        clientApp: 'ClientApplications',
+        defaultAlbum: 'c7f17d3a-22cf-4e07-9f1c-b8bc18141934'
     }
     //Image Library Proxy
     var ilDefaults = {
@@ -59,9 +60,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         options = Source.options;
         var element = Source.element;
         GetImageLibraryTemplates(element);
-//        $('#btnSubmit').click(function () {
-//            GetImageLibraryAlbums(options);
-//        });
+        //        $('#btnSubmit').click(function () {
+        //            GetImageLibraryAlbums(options);
+        //        });
         GetImageLibraryAlbums(options)
     }
 
@@ -126,8 +127,22 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             Albums.push(ilAlbumDto(albums[i]));
         }
 
+        var dfAlbum;
+        var Parms = $.getUrlVars();
+
+        var id = Parms['id'].toString();
+        var album = Albums[0];
+
+        if (id != 'undefined') {
+            for (var i=0; i < Albums.length; i++) {
+                if (Albums[i].Id == id) {
+                    album = Albums[i];
+                }
+            }
+        }
 
 
+        GetAlbumImages(album.uri);
         $('#ivAlbumsDisplay').empty();
         //Initialize Albums
         //        var template = "<div class=\"btnImageAlbum\" data-uri=\"${uri}\"><img src=\"../../Content/${coverArt.ThumbAddress}\" /></div>";
@@ -217,4 +232,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             });
         }
     }
+    $.extend({
+        getUrlVars: function () {
+            var vars = [], hash;
+            var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            for (var i = 0; i < hashes.length; i++) {
+                hash = hashes[i].split('=');
+                vars.push(hash[0]);
+                vars[hash[0]] = hash[1];
+            }
+            return vars;
+        },
+        getUrlVar: function (name) {
+            return $.getUrlVars()[name];
+        }
+    });
 })(jQuery)
+

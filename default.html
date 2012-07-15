@@ -49,7 +49,12 @@
             $('.btnImages').click(
                     function (e) {
                         e.preventDefault();
-                        $('.frmIL').attr('src', "Pages/Media/ImageLibrary.html");
+                        var id = '';
+                        var data = $(this).data("albumid");
+                        if (data != 'undefined') {
+                            id = '?id=' + data;
+                        }
+                        $('.frmIL').attr('src', "Pages/Media/ImageLibrary.html" + id);
                         $('.ImageLibrary').fadeIn(1000);
                     });
             $('#close').click(
