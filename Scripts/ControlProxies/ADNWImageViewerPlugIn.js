@@ -22,6 +22,28 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 (function ($, undefined) {
 
+    var pagination_options = {
+        num_edge_entries: 2,
+        num_display_entries: 2,
+        callback: pageselectCallback,
+        items_per_page: 15
+    }
+    function pageselectCallback(page_index, jq) {
+        var items_per_page = pagination_options.items_per_page;
+        var offset = page_index * items_per_page;       
+        var new_content = $('#ImageListHidden li').slice(offset, offset + items_per_page).clone();
+        //        var new_content = jQuery('#hiddenresult div.result:eq(' + page_index + ')').clone();
+        $('#ImageList').empty().append(new_content);
+        return false;
+    }
+    function initPagination() {
+        var ilist = $('#ImageListHidden');
+        // count entries inside the hidden content
+        var num_entries = $("#ImageListHidden li").length;
+        // Create content inside pagination element
+        $("#Pagination").pagination(num_entries, pagination_options);
+    }
+
     var options;
     var ProxyDefaults = {
         Id: '',
@@ -143,6 +165,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
         $('#ivAlbumsDisplay').empty();
         $('#ivAlbum').tmpl(Albums).appendTo('#ivAlbumsDisplay');
+        $('#ivPagination').tmpl().appendTo('#ivAlbumsDisplay');
         $('.btnImageAlbum').click(function () {
             $('.btnImageAlbum').removeClass("CurrentAlbum");
             var o = $(this).data("uri");
@@ -183,8 +206,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             Images.push(ilImageDto(images[i]));
         }
 
-        $('#ivImagesDisplay>ul').empty();
-        $('#ivImage').tmpl(Images).appendTo('#ivImagesDisplay>ul');
+        $('#ImageListHidden').empty();
+        $('#ivImage').tmpl(Images).appendTo('#ImageListHidden');
+        initPagination();
         $('.imageHolder').click(function (d) {
             LoadImageFromAlbum($(this).data());
         });

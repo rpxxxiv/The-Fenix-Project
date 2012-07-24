@@ -4,8 +4,9 @@
     <title></title>
     <script type="text/javascript" src="../../Scripts/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="../../Scripts/jquery.tmpl.min.js"></script>
-
+    <link type="text/css" href="../../Styles/pagination.css" rel="stylesheet" />
     <script type="text/javascript" src="../../Scripts/ControlProxies/ADNWImageViewerPlugIn.js"></script>
+    <script type="text/javascript" src="../../Scripts/jquery.pagination.js"></script>
     <script type="text/javascript">
         $.support.cors = true;
         $(window).ready(
@@ -64,18 +65,24 @@
             margin-right:auto;
             height:20%;
         }
-        #ivImagesDisplay>ul
+        
+        #ImageList
         {
             list-style-type:none;
             position:fixed;
-            top:21%;
-            left:0;
+            top:22%;
+            margin-top:0%;
+            margin-left:0%;
             margin-right:auto;
             max-width:170px;
             max-height:400px;
             clear:both;
             overflow:hidden;
             
+        }
+        #ImageListHidden
+        {
+            display:none;
         }
         .imageHolder
         {
