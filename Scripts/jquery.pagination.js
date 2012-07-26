@@ -81,7 +81,7 @@
 		appendRange:function(container, current_page, start, end, opts) {
 			var i;
 			for(i=start; i<end; i++) {
-				this.createLink(i, current_page, opts).appendTo(container);
+				//this.createLink(i, current_page, opts).appendTo(container);
 			}
 		},
 		getLinks:function(current_page, eventHandler) {
@@ -101,7 +101,7 @@
 				this.appendRange(fragment, current_page, 0, end, {classes:'sp'});
 				if(this.opts.num_edge_entries < interval.start && this.opts.ellipse_text)
 				{
-					$("<span>"+this.opts.ellipse_text+"</span>").appendTo(fragment);
+					//$("<span>"+this.opts.ellipse_text+"</span>").appendTo(fragment);
 				}
 			}
 			// Generate interval links
@@ -111,10 +111,10 @@
 			{
 				if(np-this.opts.num_edge_entries > interval.end && this.opts.ellipse_text)
 				{
-					$("<span>"+this.opts.ellipse_text+"</span>").appendTo(fragment);
+					//$("<span>"+this.opts.ellipse_text+"</span>").appendTo(fragment);
 				}
 				begin = Math.max(np-this.opts.num_edge_entries, interval.end);
-				this.appendRange(fragment, current_page, begin, np, {classes:'ep'});
+				//this.appendRange(fragment, current_page, begin, np, {classes:'ep'});
 				
 			}
 			// Generate "Next"-Link

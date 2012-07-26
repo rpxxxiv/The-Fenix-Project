@@ -14,6 +14,7 @@
     text-decoration: none;
 	border: solid 1px Goldenrod;
 	color: Goldenrod;
+	
 }
 
 .pagination a, .pagination span {
@@ -24,6 +25,7 @@
 	margin-bottom: 5px;
 	min-width:1em;
 	text-align:center;
+
 }
 
 .pagination .current {

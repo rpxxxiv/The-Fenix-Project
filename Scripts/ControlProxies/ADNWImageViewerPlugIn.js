@@ -24,16 +24,22 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     var pagination_options = {
         num_edge_entries: 2,
-        num_display_entries: 2,
+        num_display_entries: 0,
         callback: pageselectCallback,
         items_per_page: 15
     }
     function pageselectCallback(page_index, jq) {
         var items_per_page = pagination_options.items_per_page;
-        var offset = page_index * items_per_page;       
+        var offset = page_index * items_per_page;
         var new_content = $('#ImageListHidden li').slice(offset, offset + items_per_page).clone();
+
+
         //        var new_content = jQuery('#hiddenresult div.result:eq(' + page_index + ')').clone();
         $('#ImageList').empty().append(new_content);
+        $('.imageHolder').click(function (d) {
+            LoadImageFromAlbum($(this).data());
+        });
+
         return false;
     }
     function initPagination() {
@@ -209,9 +215,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         $('#ImageListHidden').empty();
         $('#ivImage').tmpl(Images).appendTo('#ImageListHidden');
         initPagination();
-        $('.imageHolder').click(function (d) {
-            LoadImageFromAlbum($(this).data());
-        });
+
         LoadImageFromAlbum(Images[0]);
     }
 
