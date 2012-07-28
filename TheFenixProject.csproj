@@ -83,21 +83,7 @@
     <Content Include="Content\Images\101003CLJNSANDERSF48-1.jpg" />
     <Content Include="Content\Images\101003CLJNSANDERSF48-2.jpg" />
     <Content Include="Content\Images\101003CLJNSANDERSF48-3.jpg" />
-    <Content Include="Content\Images\1AboutUsLogo.png" />
-    <Content Include="Content\Images\1ADNWLogo.png" />
-    <Content Include="Content\Images\1BlueDiamondLogo.png" />
-    <Content Include="Content\Images\1EventsLogo.png" />
-    <Content Include="Content\Images\1FacebookLogo.png" />
-    <Content Include="Content\Images\1GalleryLogo.png" />
-    <Content Include="Content\Images\1HomeLogo.png" />
-    <Content Include="Content\Images\1MASTERLogo.png" />
-    <Content Include="Content\Images\1ReverbnationLogo.png" />
-    <Content Include="Content\Images\1th_FenixAboutUS.png" />
-    <Content Include="Content\Images\AboutUsLogo.png" />
     <Content Include="Content\Images\ADNW-logo.jpg" />
-    <Content Include="Content\Images\ADNWLogo.png" />
-    <Content Include="Content\Images\BlueDiamondLogo.png" />
-    <Content Include="Content\Images\ContactLogo.png" />
     <Content Include="Content\Images\DSC_0011-1.jpg" />
     <Content Include="Content\Images\DSC_0029-1.jpg" />
     <Content Include="Content\Images\DSC_0032-1.jpg" />
@@ -118,7 +104,6 @@
     <Content Include="Content\Images\DSC_0151-1.jpg" />
     <Content Include="Content\Images\DSC_0152-1.jpg" />
     <Content Include="Content\Images\DSC_0158-1.jpg" />
-    <Content Include="Content\Images\DSC_0173-1.jpg" />
     <Content Include="Content\Images\DSC_1134-1.jpg" />
     <Content Include="Content\Images\DSC_1136-1.jpg" />
     <Content Include="Content\Images\DSC_1136-2.jpg" />
@@ -144,7 +129,6 @@
     <Content Include="Content\Images\DSC_9058-1.jpg" />
     <Content Include="Content\Images\DSC_9058-2.jpg" />
     <Content Include="Content\Images\DSC_9741-1.jpg" />
-    <Content Include="Content\Images\DSC_9756-1.jpg" />
     <Content Include="Content\Images\DSC_9774-1.jpg" />
     <Content Include="Content\Images\DSC_9791-1.jpg" />
     <Content Include="Content\Images\DSC_9813-1.jpg" />
@@ -154,11 +138,6 @@
     <Content Include="Content\Images\DSC_9946-1.jpg" />
     <Content Include="Content\Images\DSC_9956-1.jpg" />
     <Content Include="Content\Images\DSC_9983-1.jpg" />
-    <Content Include="Content\Images\EventsLogo.png" />
-    <Content Include="Content\Images\FacebookLogo.png" />
-    <Content Include="Content\Images\GalleryLogo.png" />
-    <Content Include="Content\Images\HomeLogo.png" />
-    <Content Include="Content\Images\ReverbnationLogo.png" />
     <Content Include="Content\Images\th_101003CLJNSANDERSF01.JPG" />
     <Content Include="Content\Images\th_101003CLJNSANDERSF02.JPG" />
     <Content Include="Content\Images\th_101003CLJNSANDERSF03-1.jpg" />
@@ -211,7 +190,6 @@
     <Content Include="Content\Images\th_DSC_0151-1.jpg" />
     <Content Include="Content\Images\th_DSC_0152-1.jpg" />
     <Content Include="Content\Images\th_DSC_0158-1.jpg" />
-    <Content Include="Content\Images\th_DSC_0173-1.jpg" />
     <Content Include="Content\Images\th_DSC_1134-1.jpg" />
     <Content Include="Content\Images\th_DSC_1136-1.jpg" />
     <Content Include="Content\Images\th_DSC_1136-2.jpg" />
@@ -235,7 +213,6 @@
     <Content Include="Content\Images\th_DSC_9058-1.jpg" />
     <Content Include="Content\Images\th_DSC_9058-2.jpg" />
     <Content Include="Content\Images\th_DSC_9741-1.jpg" />
-    <Content Include="Content\Images\th_DSC_9756-1.jpg" />
     <Content Include="Content\Images\th_DSC_9774-1.jpg" />
     <Content Include="Content\Images\th_DSC_9791-1.jpg" />
     <Content Include="Content\Images\th_DSC_9813-1.jpg" />
@@ -250,6 +227,7 @@
     <Content Include="Content\Images\th_JeffOtto-1.jpg" />
     <Content Include="Controls\Guestbook\ADNWGuestbook.htm" />
     <Content Include="Controls\ImageViewer\ImageViewer.htm" />
+    <Content Include="Pages\empty.html" />
     <Content Include="Pages\LegalFooter.html" />
     <Content Include="Pages\Members\FenixSanders.htm" />
     <Content Include="Pages\Members\FredGarner.htm" />
@@ -268,6 +246,7 @@
     <Content Include="Scripts\Home.js" />
     <Content Include="Scripts\html5shiv-printshiv.js" />
     <Content Include="Scripts\html5shiv.js" />
+    <Content Include="Scripts\jquery.pagination.js" />
     <Content Include="Scripts\Members.js" />
     <Content Include="Styles\Agenda.css" />
     <Content Include="Styles\Calendar\fullcalendar.css" />
@@ -299,13 +278,17 @@
     <Content Include="Scripts\jquery.tmpl.min.js" />
     <Content Include="Scripts\Navigation.js" />
     <Content Include="Styles\Layout\101003CLJNSANDERSF15.JPG" />
-    <Content Include="default.html" />
+    <Content Include="default.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Pages\AboutUs.html" />
     <Content Include="Pages\Contact.html" />
     <Content Include="Pages\Events.html" />
     <Content Include="Pages\GuestBook.html" />
     <Content Include="Pages\Home.html" />
-    <Content Include="Pages\Media\ImageLibrary.html" />
+    <Content Include="Pages\Media\ImageLibrary.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Pages\Media\VideoLibrary.html" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <Content Include="Styles\Content.css" />
@@ -318,6 +301,7 @@
     <Content Include="Styles\Layout\GuestbookLogo.png" />
     <Content Include="Styles\Layout\HomeLogo.png" />
     <Content Include="Styles\Layout\ReverbnationLogo.png" />
+    <Content Include="Styles\pagination.css" />
     <Content Include="Styles\Site.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -335,7 +319,6 @@
     <Folder Include="Content\Videos\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Content\Images\Thumbs.db" />
     <None Include="Fonts\batmfa_.ttf" />
     <None Include="Fonts\batmfa_.woff" />
     <None Include="Fonts\bm.eot" />
