@@ -30,12 +30,17 @@
 
 .pagination .current {
     background: Goldenrod;
-    color: Red;
+    color: transparent;
 	border: solid 1px #AAE;
 }
 
 .pagination .current.prev, .pagination .current.next{
 	color:Goldenrod;
-	border-color:Red;
+	border-color:transparent;
 	background:transparent;
+}
+
+.prev, .next
+{
+    width:36%;
 }
