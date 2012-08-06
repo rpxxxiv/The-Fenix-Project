@@ -1,0 +1,182 @@
+﻿        body
+        {
+            font-family:Prestige Elite Std;
+            background-color:Black;
+        }
+        #Player
+        {
+            margin:0;
+            padding:0;
+            width:200px;
+            list-style-type:none;
+              
+        }        
+        #Player>li
+        {
+            width:100%;
+        }
+        .apDisplay
+        {
+            
+            margin:0;
+            padding:0;
+            width:100%;
+            list-style-type:none;
+            clear:both;
+        } 
+        .apDisplay li
+        {
+            margin:0;
+            padding:0;
+            
+        } 
+        #SongTitle
+        {
+            float:left;
+            margin-left:0px;
+            color:Goldenrod;
+            font-size:75%; 
+        } 
+        #Duration
+        {
+            float:right;
+            margin-right:0px;
+            padding:0;
+            color:goldenrod;
+            font-size:75%;
+            text-align:left;
+            z-index:10;
+
+        }
+        #duration
+        {
+            clear:both;
+            width:100%;
+        }
+        #duration>div.durationPercent
+        {
+            margin:0;
+            padding:0;
+            width:0%;
+            height:100%; 
+            background-color:Red;
+            border:2px solid goldenrod;
+        }
+
+
+
+        .apNav
+        {
+            margin:0;
+            padding:0;
+            margin-top:2%;
+            width:100%;
+            list-style-type:none;
+            clear:both;
+        } 
+        .apNav>li
+        {
+            float:left;
+            margin:0;
+            margin-right:2%;
+            width: 10%;
+            height:20px;
+        }
+        .apButton
+        {
+            height:100%;
+            width:100%;
+            border: 1px solid black;
+            margin-right: 2px;
+            -moz-border-radius:15%;
+            border-radius:15%;  
+            text-align:center;
+        }    
+        
+        .apButtonHover
+        {            
+            border:1px solid goldenrod;   
+        }
+        .apNav li.last
+        {
+            background-image:none;
+            border:0px none black;
+            width:25%;
+        }  
+        .volUp, .volDown,
+        .volDisplay
+        {
+            padding:0;
+            margin:0;
+            width:100%;
+            height:100%;  
+            
+        }
+        .volUp
+        {
+            height:100%;
+            width:100%;
+            background-image: url('../Images/VolUp.png');
+            background-position:center center;
+            background-repeat:no-repeat;
+            background-size:100%;            
+        }
+        .volDown
+        {
+            height:100%;
+            width:100%;
+            background-image: url('../Images/volDown.png');
+            background-position:center center;
+            background-repeat:no-repeat;
+            background-size:100%;            
+        }
+        .apNav>li.last .volDisplay .volPercent
+        {
+            padding:0;
+            
+            margin:0;
+            margin-top:15%;
+            margin-left:5%;
+            height:30%;
+            background-color: Red;
+            background-position:center center;
+            background-repeat:no-repeat;
+            background-size:100%;     
+        }
+        .play
+        {
+            height:100%;
+            width:100%;
+            background-image: url('../Images/Pause.png');
+            background-position:center center;
+            background-repeat:no-repeat;
+            background-size:100%;    
+        } 
+        .next
+        {
+            height:100%;
+            width:100%;
+            background-image: url('../Images/Next.png');
+            background-position:center center;
+            background-repeat:no-repeat;
+            background-size:100%;    
+        } 
+         .previous
+        {
+            height:100%;
+            width:100%;
+            background-image: url('../Images/Prev.png');
+            background-position:center center;
+            background-repeat:no-repeat;
+            background-size:100%;   
+        }
+        .mute
+        {
+            height:100%;
+            width:100%;
+            background-image: url('../Images/Sound.png');
+            background-position:center center;
+            background-repeat:no-repeat;
+            background-size:100%;    
+        }    
+

@@ -8,9 +8,12 @@
         live music, concert, blue diamond, fenix, fenix project, jason thomas, fenix sanders, jeffery otto, jeff otto, 
         jeffery frankel, jeff frankel, fred garner, jam session" />
     <link type="text/css" href="Styles/Site.css" rel="stylesheet" />
+    <link href="Controls/AudioPlayer/Styles/ADNWAudioPlayer.css" type="text/css" rel="stylesheet" />
+
     <script type="text/javascript" src="Scripts/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="Scripts/jquery.tmpl.min.js"></script>
     <script type="text/javascript" src="Scripts/Navigation.js"></script>
+    <script type="text/javascript" src="Controls/AudioPlayer/Scripts/ADNWAudioPlayer.js"></script>
     <script type="text/javascript">
         var toggleSpeed = 500;
         $(window).ready(
@@ -61,7 +64,7 @@
                     function () {
                         $('.ImageLibrary').fadeOut(1000);
                     });
-
+            $('#ADNWAudioPlayer').AudioPlayer();
         });
     </script>
     <!--[if lt IE 9]>
@@ -69,6 +72,7 @@
 <![endif]-->
 </head>
 <body>
+
 <!-- Image Library Feature -->
 <div class="ImageLibrary">
     <div class="ImageLibraryBackground"></div>
@@ -95,8 +99,7 @@
     </div>
 </div>
 <div id="mediabar">
-    <div id="audioplayer">
-    </div>
+    <div id="ADNWAudioPlayer" style="position:absolute;top:0;right:0;"></div>
     <div id="photoshoot" class="btnImages" data-albumid="c7f17d3a-22cf-4e07-9f1c-b8bc18141934">
         <p style="font-size:150%;" >Photo Shoots</p>
     </div>

@@ -51,6 +51,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Audio\01 Porch Table.mp3" />
+    <Content Include="Content\Audio\02 Red Chicken.mp3" />
+    <Content Include="Content\Audio\03 Mene.mp3" />
+    <Content Include="Content\Audio\04 Pele.mp3" />
+    <Content Include="Content\Audio\05 Chamaco.mp3" />
     <Content Include="Content\Images\101003CLJNSANDERSF01.JPG" />
     <Content Include="Content\Images\101003CLJNSANDERSF02.JPG" />
     <Content Include="Content\Images\101003CLJNSANDERSF03-1.jpg" />
@@ -225,6 +230,18 @@
     <Content Include="Content\Images\th_FenixAboutUS.png" />
     <Content Include="Content\Images\th_Fred-1.jpg" />
     <Content Include="Content\Images\th_JeffOtto-1.jpg" />
+    <Content Include="Controls\AudioPlayer\Images\MinMaxVol.png" />
+    <Content Include="Controls\AudioPlayer\Images\Mute.png" />
+    <Content Include="Controls\AudioPlayer\Images\Next.png" />
+    <Content Include="Controls\AudioPlayer\Images\Pause.png" />
+    <Content Include="Controls\AudioPlayer\Images\Play.png" />
+    <Content Include="Controls\AudioPlayer\Images\Prev.png" />
+    <Content Include="Controls\AudioPlayer\Images\Sound.png" />
+    <Content Include="Controls\AudioPlayer\Images\VolDown.png" />
+    <Content Include="Controls\AudioPlayer\Images\VolUp.png" />
+    <Content Include="Controls\AudioPlayer\Scripts\ADNWAudioPlayer.js" />
+    <Content Include="Controls\AudioPlayer\Styles\ADNWAudioPlayer.css" />
+    <Content Include="Controls\AudioPlayer\Templates\AudioPlayer.htm" />
     <Content Include="Controls\Guestbook\ADNWGuestbook.htm" />
     <Content Include="Controls\ImageViewer\ImageViewer.htm" />
     <Content Include="Pages\empty.html" />
@@ -315,10 +332,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content\Audio\" />
     <Folder Include="Content\Videos\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Content\Audio\01 Porch Table.ogg" />
+    <None Include="Content\Audio\02 Red Chicken.ogg" />
+    <None Include="Content\Audio\03 Mene.ogg" />
+    <None Include="Content\Audio\04 Pele.ogg" />
+    <None Include="Content\Audio\05 Chamaco.ogg" />
     <None Include="Fonts\batmfa_.ttf" />
     <None Include="Fonts\batmfa_.woff" />
     <None Include="Fonts\bm.eot" />
