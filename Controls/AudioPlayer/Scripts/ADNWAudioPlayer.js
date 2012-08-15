@@ -177,11 +177,11 @@ function AudioPlayer(element, options) {
     function PlayPause() {
         if (player.paused == false) {
             player.pause();
-            $('.play').css('background-image', "url('../Controls/AudioPlayer/Images/Play.png')");
+            $('.play').css('background-image', "url('Controls/AudioPlayer/Images/Play.png')");
         }
         else {
             player.play();
-            $('.play').css('background-image', "url('../Controls/AudioPlayer/Images/Pause.png')");
+            $('.play').css('background-image', "url('Controls/AudioPlayer/Images/Pause.png')");
 
         }
     }
@@ -190,11 +190,11 @@ function AudioPlayer(element, options) {
         if (player.volume != 0) {
             volume = player.volume;
             player.volume = 0;
-            $('.mute').css('background-image', "url('../Controls/AudioPlayer/Images/Mute.png')");
+            $('.mute').css('background-image', "url('Controls/AudioPlayer/Images/Mute.png')");
         }
         else {
             player.volume = volume;
-            $('.mute').css('background-image', "url('../Controls/AudioPlayer/Images/Sound.png')");
+            $('.mute').css('background-image', "url('Controls/AudioPlayer/Images/Sound.png')");
         }
     }
 
