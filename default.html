@@ -13,6 +13,7 @@
     <script type="text/javascript" src="Scripts/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="Scripts/jquery.tmpl.min.js"></script>
     <script type="text/javascript" src="Scripts/Navigation.js"></script>
+    <script type="text/javascript" src="Scripts/ControlProxies/ADNWAudioPlayerPlugin.js"></script>
     <script type="text/javascript" src="Controls/AudioPlayer/Scripts/ADNWAudioPlayer.js"></script>
     <script type="text/javascript">
         var toggleSpeed = 500;
@@ -64,7 +65,7 @@
                     function () {
                         $('.ImageLibrary').fadeOut(1000);
                     });
-            $('#ADNWAudioPlayer').AudioPlayer();
+            $('#ADNWAudioPlayer').AudioPlayer({AudioLinks : $AudioLinks});
         });
     </script>
     <!--[if lt IE 9]>

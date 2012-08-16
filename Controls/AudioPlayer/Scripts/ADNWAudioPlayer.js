@@ -1,13 +1,6 @@
 ﻿
-var $AudioLinks =
-    [ 
-        { Title: 'Porch Table', Path: '01 Porch Table', Type: 'omw', ID:1 },
-        { Title: 'Red Chicken', Path: '02 Red Chicken', Type: 'omw', ID: 2 },
-        { Title: 'Mene', Path: '03 Mene', Type: 'omw', ID: 3 },
-        { Title: 'Pele', Path: '04 Pele', Type: 'omw', ID: 4 },
-        { Title: 'Chamaco', Path: '05 Chamaco', Type: 'omw', ID: 5}
-    ]
 
+var AudioLinks;
 var songs;
 var currentSong;
 var player;
@@ -26,6 +19,7 @@ var apDefaults = {
 
 $.fn.AudioPlayer = function (options) {
     options = $.extend(true, {}, apDefaults, options);
+    //songs = options.AudioLinks;
     this.each(function (i, _element) {
         element = $(_element);
         var audioPlayer = AudioPlayer(_element, options);
@@ -34,7 +28,7 @@ $.fn.AudioPlayer = function (options) {
 
 function AudioPlayer(element, options) {
     GetAudioPlayerTemplates(element, options);
-    songs = $AudioLinks;
+    songs = options.AudioLinks;
 }
     function SetButtonActions() {
         $('.apButton').mousedown(function () {

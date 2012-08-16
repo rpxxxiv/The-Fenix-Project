@@ -254,6 +254,7 @@
     <Content Include="Pages\Members\Members.html" />
     <Content Include="Pages\Members\MilesThompson.htm" />
     <Content Include="Scripts\content.js" />
+    <Content Include="Scripts\ControlProxies\ADNWAudioPlayerPlugin.js" />
     <Content Include="Scripts\ControlProxies\ADNWGuestbookPlugIn.js" />
     <Content Include="Scripts\ControlProxies\ADNWImageViewerPlugIn.js" />
     <Content Include="Scripts\FullCalendar\ADNWAgendaPlugin.js" />
