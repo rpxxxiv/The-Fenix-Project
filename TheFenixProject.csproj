@@ -51,11 +51,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Audio\01 Porch Table.mp3" />
-    <Content Include="Content\Audio\02 Red Chicken.mp3" />
-    <Content Include="Content\Audio\03 Mene.mp3" />
-    <Content Include="Content\Audio\04 Pele.mp3" />
-    <Content Include="Content\Audio\05 Chamaco.mp3" />
+    <Content Include="Content\Audio\FenixBlueDiamond1.mp3" />
+    <Content Include="Content\Audio\FenixBlueDiamond2.mp3" />
+    <Content Include="Content\Audio\FenixBlueDiamond3.mp3" />
+    <Content Include="Content\Audio\FenixBlueDiamond4.mp3" />
+    <Content Include="Content\Audio\FenixBlueDiamond5.mp3" />
+    <Content Include="Content\Audio\FenixBlueDiamond6.mp3" />
     <Content Include="Content\Images\101003CLJNSANDERSF01.JPG" />
     <Content Include="Content\Images\101003CLJNSANDERSF02.JPG" />
     <Content Include="Content\Images\101003CLJNSANDERSF03-1.jpg" />
@@ -336,11 +337,6 @@
     <Folder Include="Content\Videos\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Content\Audio\01 Porch Table.ogg" />
-    <None Include="Content\Audio\02 Red Chicken.ogg" />
-    <None Include="Content\Audio\03 Mene.ogg" />
-    <None Include="Content\Audio\04 Pele.ogg" />
-    <None Include="Content\Audio\05 Chamaco.ogg" />
     <None Include="Fonts\batmfa_.ttf" />
     <None Include="Fonts\batmfa_.woff" />
     <None Include="Fonts\bm.eot" />

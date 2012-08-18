@@ -71,6 +71,7 @@ function Members(element, options) {
 
         function LoadMembers(source, options, element) {
             var members = source.ClientMembers;
+            members = members.sort(function (a, b) { return a.SortOrder - b.SortOrder; });
             for (var i = 0; i < members.length; i++) {
                 var jsonMember = members[i];
                 $(element).append(jsonMember.ClientMemberDescription);

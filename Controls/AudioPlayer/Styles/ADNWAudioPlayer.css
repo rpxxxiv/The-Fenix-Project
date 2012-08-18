@@ -7,7 +7,7 @@
         {
             margin:0;
             padding:0;
-            width:15%;
+            width:18%;
             list-style-type:none;
               
         }        
@@ -26,6 +26,7 @@
         } 
         .apDisplay li
         {
+            width:100%;
             margin:0;
             padding:0;
             
@@ -33,26 +34,19 @@
         #SongTitle
         {
             float:left;
+            width:100%;
             margin-left:0px;
             color:Goldenrod;
-            font-size:75%; 
+            font-size:50%; 
         } 
-        #Duration
-        {
-            float:right;
-            margin-right:0px;
-            padding:0;
-            color:goldenrod;
-            font-size:75%;
-            text-align:left;
-            z-index:10;
 
-        }
         #duration
         {
             clear:both;
-            width:100%;
+            width:70%;
+            float:left;
         }
+        
         #duration>div.durationPercent
         {
             margin:0;
@@ -60,9 +54,26 @@
             width:0%;
             height:100%; 
             background-color:Red;
-            border:2px solid goldenrod;
+            border:5px solid goldenrod;
         }
+        #durationText
+        {
+            float:right;
+            margin-right:0px;
+            padding:0;           
+        }
+        #Duration
+        {
+            float:right;
+            margin-right:0px;
+            padding:0;
+            color:goldenrod;
+            font-size:50%;
+            text-align:left;
+            z-index:10;
 
+
+        }
 
 
         .apNav

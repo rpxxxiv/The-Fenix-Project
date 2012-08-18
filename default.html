@@ -21,7 +21,6 @@
         function () {
             $('#navFrame').load(
                 function () {
-                    //frameResize($(this));
                     $('.btnNav').stop().animate({ 'margin-left': '-135px' }, 0);
                     $('html, body').animate({ scrollTop: 0 }, 0);
                     $(this).animate({ opacity: 1.0 }, toggleSpeed);
@@ -65,7 +64,7 @@
                     function () {
                         $('.ImageLibrary').fadeOut(1000);
                     });
-            $('#ADNWAudioPlayer').AudioPlayer({AudioLinks : $AudioLinks});
+                    $('#ADNWAudioPlayer').AudioPlayer({ Id: 'f4dd85cf-ce1e-e2d1-3171-650938abd2b7' });
         });
     </script>
     <!--[if lt IE 9]>
