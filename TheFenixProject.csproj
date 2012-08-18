@@ -51,12 +51,24 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Audio\FenixBlueDiamond1.mp3" />
-    <Content Include="Content\Audio\FenixBlueDiamond2.mp3" />
-    <Content Include="Content\Audio\FenixBlueDiamond3.mp3" />
-    <Content Include="Content\Audio\FenixBlueDiamond4.mp3" />
-    <Content Include="Content\Audio\FenixBlueDiamond5.mp3" />
-    <Content Include="Content\Audio\FenixBlueDiamond6.mp3" />
+    <Content Include="Content\Audio\FenixBlueDiamond1.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Audio\FenixBlueDiamond2.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Audio\FenixBlueDiamond3.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Audio\FenixBlueDiamond4.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Audio\FenixBlueDiamond5.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Audio\FenixBlueDiamond6.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\Images\101003CLJNSANDERSF01.JPG" />
     <Content Include="Content\Images\101003CLJNSANDERSF02.JPG" />
     <Content Include="Content\Images\101003CLJNSANDERSF03-1.jpg" />
@@ -246,6 +258,7 @@
     <Content Include="Controls\Guestbook\ADNWGuestbook.htm" />
     <Content Include="Controls\ImageViewer\ImageViewer.htm" />
     <Content Include="Pages\empty.html" />
+    <Content Include="Pages\LegalFooter.html" />
     <Content Include="Pages\Members\FenixSanders.htm" />
     <Content Include="Pages\Members\FredGarner.htm" />
     <Content Include="Pages\Members\JasonThomas.htm" />
