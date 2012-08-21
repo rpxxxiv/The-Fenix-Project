@@ -137,6 +137,7 @@
             }
 
         });
+        fields['GuestComment'] = fields['GuestComment'].replace("'", "''");
         var entry = $gbDto(fields);
         if (!EntryValid(entry)) {
             return;

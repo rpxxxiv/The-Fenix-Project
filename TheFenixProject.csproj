@@ -258,7 +258,6 @@
     <Content Include="Controls\Guestbook\ADNWGuestbook.htm" />
     <Content Include="Controls\ImageViewer\ImageViewer.htm" />
     <Content Include="Pages\empty.html" />
-    <Content Include="Pages\LegalFooter.html" />
     <Content Include="Pages\Members\FenixSanders.htm" />
     <Content Include="Pages\Members\FredGarner.htm" />
     <Content Include="Pages\Members\JasonThomas.htm" />
