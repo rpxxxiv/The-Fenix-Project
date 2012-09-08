@@ -95,20 +95,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     }
 
     function GetImageLibraryAlbums(options) {
-        if ($.browser.msie && window.XDomainRequest) {
-            var xdr = new XDomainRequest();
-            xdr.open("get", options.url);
-            xdr.onload = function () {
-                var JSON = $.parseJSON(xdr.responseText);
-                if (JSON == null || typeof (JSON) == 'undefined') {
-                    JSON = $.parseJSON(data.firstChild.textContent);
-                }
-                LoadImageLibraryAlbums(JSON.d, options, element);
-            }
-            xdr.send();
+//        if ($.browser.msie && window.XDomainRequest) {
+//            var xdr = new XDomainRequest();
+//            xdr.open("get", options.url);
+//            xdr.onload = function () {
+//                var JSON = $.parseJSON(xdr.responseText);
+//                if (JSON == null || typeof (JSON) == 'undefined') {
+//                    JSON = $.parseJSON(data.firstChild.textContent);
+//                }
+//                LoadImageLibraryAlbums(JSON.d, options, element);
+//            }
+//            xdr.send();
 
-        }
-        else {
+//        }
+//        else {
             $.getJSON(
                 options.url,
                 function (msg) {
@@ -116,7 +116,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
                 }).error(function (jqXHR, textStatus, errorThrown) {
                     alert('Error:' + textStatus + '  Message:' + errorThrown);
                 });
-        }
+//        }
     }
 
     var ilAlbumDto = function (Album) {
@@ -182,20 +182,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     }
 
     function GetAlbumImages(uri, element) {
-        if ($.browser.msie && window.XDomainRequest) {
-            var xdr = new XDomainRequest();
-            xdr.open("get", uri);
-            xdr.onload = function () {
-                var JSON = $.parseJSON(xdr.responseText);
-                if (JSON == null || typeof (JSON) == 'undefined') {
-                    JSON = $.parseJSON(data.firstChild.textContent);
-                }
-                LoadAlbumImages(JSON.d, element);
-            }
-            xdr.send();
+//        if ($.browser.msie && window.XDomainRequest) {
+//            var xdr = new XDomainRequest();
+//            xdr.open("get", uri);
+//            xdr.onload = function () {
+//                var JSON = $.parseJSON(xdr.responseText);
+//                if (JSON == null || typeof (JSON) == 'undefined') {
+//                    JSON = $.parseJSON(data.firstChild.textContent);
+//                }
+//                LoadAlbumImages(JSON.d, element);
+//            }
+//            xdr.send();
 
-        }
-        else {
+//        }
+//        else {
             $.getJSON(
                 uri,
                 function (msg) {
@@ -203,7 +203,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
                 }).error(function (jqXHR, textStatus, errorThrown) {
                     alert('Error:' + textStatus + '  Message:' + errorThrown);
                 });
-        }
+//        }
     }
     function LoadAlbumImages(ImageSource) {
         var Images = [];

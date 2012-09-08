@@ -14,9 +14,10 @@
     <script type="text/javascript">
         $(window).ready(function () {
             $('#agenda').Agenda({ maxResults: 3 });
+            
             $('.btnMember').click(function () {
                 if (window != window.top) {
-                    window.location.href = 'AboutUs.html?id=' + $(this).attr('id').toString();
+                    window.location.href = 'AboutUs.html?id=' + $(this).data('id').toString();
 
                 }
             });
@@ -45,11 +46,11 @@
     <!--About us-->
     <a href="AboutUs.html">
     <div id="btnaboutus" class="homebtns">
-        <img class="btnMember" id="a6e15e23-1f08-4c9d-8091-087a9300c531" src="../Content/Images/th_DSC_7581-1.jpg" title="Jason Thomas" height="25%" width="25%" style="position:absolute; top:5%; left:5%;" />
-        <img class="btnMember" id="b93b66b1-d1c8-436e-8bdb-07daae090544"  src="../Content/Images/th_JeffOtto-1.jpg" title="Jeff Otto" height="25%" width="25%" style="position:absolute; top:70%; left:70%;" />
-        <img class="btnMember" id="da0c333c-1dde-4468-a729-3aa1cc5f41a7"  src="../Content/Images/th_Fred-1.jpg" title="Fred Garner" height="25%" width="25%" style="position:absolute; top:70%; left:37%;" />
-        <img class="btnMember" id="f7736b8d-1f2e-4744-a4fb-b05861b1f4b9"  src="../Content/Images/DSC_1152-1.jpg" title="Miles Thompson"height="25%" width="25%" style="position:absolute; top:37%; left:5%;" />
-        <img class="btnMember" id="30274543-c2f1-4cbe-9e75-aef49ec6ab8a"  src="../Content/Images/DSC_1368-2.jpg" title="Jeff Frankel" height="25%" width="25%" style="position:absolute; top:70%; left:5%;" />
+        <img class="btnMember" data-id="a6e15e23-1f08-4c9d-8091-087a9300c531" src="../Content/Images/th_DSC_7581-1.jpg" title="Jason Thomas" height="25%" width="25%" style="position:absolute; top:5%; left:5%;" />
+        <img class="btnMember" data-id="b93b66b1-d1c8-436e-8bdb-07daae090544"  src="../Content/Images/th_JeffOtto-1.jpg" title="Jeff Otto" height="25%" width="25%" style="position:absolute; top:70%; left:70%;" />
+        <img class="btnMember" data-id="da0c333c-1dde-4468-a729-3aa1cc5f41a7"  src="../Content/Images/th_Fred-1.jpg" title="Fred Garner" height="25%" width="25%" style="position:absolute; top:70%; left:37%;" />
+        <img class="btnMember" data-id="f7736b8d-1f2e-4744-a4fb-b05861b1f4b9"  src="../Content/Images/DSC_1152-1.jpg" title="Miles Thompson"height="25%" width="25%" style="position:absolute; top:37%; left:5%;" />
+        <img class="btnMember" data-id="30274543-c2f1-4cbe-9e75-aef49ec6ab8a"  src="../Content/Images/DSC_1368-2.jpg" title="Jeff Frankel" height="25%" width="25%" style="position:absolute; top:70%; left:5%;" />
         <p align="right"><img src="../Styles/Layout/AboutUsLogo.png" height="15%" width="10%" style="position: absolute; top: 3%; left: 55%;">About Us</p>
     </div>
     </a>
@@ -67,9 +68,11 @@
     </a>
     
     <div id="BreakingNews" class="homebtns">
+        <div data-id="a6e15e23-1f08-4c9d-8091-087a9300c531" class="btnMember">
         <p class="centered" style="font-size:140%;">Breaking News</p>
         <p class="centered">Jasmine Melissa was born August 31st to Jason Thomas and his Wife Chrissy.</p>
         <p class="centered">Please join us in welcoming the newest extension of the family!</p>
+        </div>
     </div>
 
     <!--    HIDDEN HOME PAGE LINKS

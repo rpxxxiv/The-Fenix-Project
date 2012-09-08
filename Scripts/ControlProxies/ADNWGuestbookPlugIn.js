@@ -64,20 +64,20 @@
     }
 
     function GetGuestbookEntries(options) {
-        if ($.browser.msie && window.XDomainRequest) {
-            var xdr = new XDomainRequest();
-            xdr.open("get", options.url);
-            xdr.onload = function () {
-                var JSON = $.parseJSON(xdr.responseText);
-                if (JSON == null || typeof (JSON) == 'undefined') {
-                    JSON = $.parseJSON(data.firstChild.textContent);
-                }
-                LoadGuestbookEntries(JSON.d, options, element);
-            }
-            xdr.send();
+//        if ($.browser.msie && window.XDomainRequest) {
+//            var xdr = new XDomainRequest();
+//            xdr.open("get", options.url);
+//            xdr.onload = function () {
+//                var JSON = $.parseJSON(xdr.responseText);
+//                if (JSON == null || typeof (JSON) == 'undefined') {
+//                    JSON = $.parseJSON(data.firstChild.textContent);
+//                }
+//                LoadGuestbookEntries(JSON.d, options, element);
+//            }
+//            xdr.send();
 
-        }
-        else {
+//        }
+//        else {
             $.getJSON(
                 options.url,
                 function (msg) {
@@ -85,7 +85,7 @@
                 }).error(function (jqXHR, textStatus, errorThrown) {
                     alert('Error:' + textStatus + '  Message:' + errorThrown);
                 });
-        }
+//        }
     }
 
     var $gbDto = function (Entry) {

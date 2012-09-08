@@ -19,6 +19,9 @@
         var toggleSpeed = 500;
         $(window).ready(
         function () {
+            $('#overlay').fadeOut(4000, function () {
+                $(this).remove();
+            });
             $('#navFrame').load(
                 function () {
                     $('.btnNav').stop().animate({ 'margin-left': '-135px' }, 0);
@@ -64,12 +67,16 @@
                     function () {
                         $('.ImageLibrary').fadeOut(1000);
                     });
-                    $('#ADNWAudioPlayer').AudioPlayer({ Id: 'f4dd85cf-ce1e-e2d1-3171-650938abd2b7' });
+            $('#ADNWAudioPlayer').AudioPlayer({ Id: 'f4dd85cf-ce1e-e2d1-3171-650938abd2b7' });
         });
     </script>
 </head>
 <body>
-<a href="http://www.myadnw.com/test/UserTesting/default.aspx?id=f4dd85cf-ce1e-e2d1-3171-650938abd2b7" target="_blank" style="position:fixed;top:0;left:0;z-index:1000;">Provide Feedback</a>
+<a href="http://www.myadnw.com/test/UserTesting/default.aspx?id=f4dd85cf-ce1e-e2d1-3171-650938abd2b7" target="_blank" style="position:fixed;top:0;left:0;z-index:100;width:240px;">Provide Feedback</a>
+<div id="overlay">
+
+</div>
+
 <!-- Image Library Feature -->
 <div class="ImageLibrary">
     <div class="ImageLibraryBackground"></div>
@@ -108,5 +115,6 @@
         property of ADNW or used with permission from Fenix Sanders
     </div>
 </div>
+
 </body>
 </html>

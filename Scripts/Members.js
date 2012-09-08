@@ -41,20 +41,20 @@ $.fn.Members = function (opts) {
 
 function Members(element, options) {
 
-    if ($.browser.msie && window.XDomainRequest) {
-        var xdr = new XDomainRequest();
-        xdr.open("get", options.url);
-        xdr.onload = function () {
-            var JSON = $.parseJSON(xdr.responseText);
-            if (JSON == null || typeof (JSON) == 'undefined') {
-                JSON = $.parseJSON(data.firstChild.textContent);
-            }
-            LoadMembers(JSON.d, options, element);
-        }
-        xdr.send();
+//    if ($.browser.msie && window.XDomainRequest) {
+//        var xdr = new XDomainRequest();
+//        xdr.open("get", options.url);
+//        xdr.onload = function () {
+//            var JSON = $.parseJSON(xdr.responseText);
+//            if (JSON == null || typeof (JSON) == 'undefined') {
+//                JSON = $.parseJSON(data.firstChild.textContent);
+//            }
+//            LoadMembers(JSON.d, options, element);
+//        }
+//        xdr.send();
 
-    }
-    else {
+//    }
+//    else {
         $.getJSON(
                 options.url,
                 function (msg) {
@@ -62,7 +62,7 @@ function Members(element, options) {
                 }).error(function (jqXHR, textStatus, errorThrown) {
                     alert('Error:' + textStatus + '  Message:' + errorThrown);
                 });
-            }
+//            }
 
 //    for (var i = 0; i < $Members.length; i++) {
 //        var m = $Members[i];

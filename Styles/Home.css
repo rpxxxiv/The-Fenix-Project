@@ -1,5 +1,6 @@
 ﻿body 
 {
+
 }
 #agenda h1
 {
@@ -96,6 +97,11 @@
     height:45%;
     width:15%;
     border:1px dotted goldenrod;
+}
+
+.btnMember
+{
+    
 }
 
 /*  HIDDEN HOME PAGE LINKS
