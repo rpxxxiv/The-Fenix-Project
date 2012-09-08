@@ -44,7 +44,7 @@ var gcDefaults = {
 
 var ProxyDefaults = {
     theme:'Styles/Agenda.css',
-    url:'http://www.google.com/calendar/feeds/firstfenix@gmail.com/public/full?alt=json-in-script&callback=?',
+    url:'http://www.google.com/calendar/feeds/n4g9aneat7biqkdsr4g3nsrjio@group.calendar.google.com/public/full?alt=json-in-script&callback=?',
     maxResults: 25
 }
 
