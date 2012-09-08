@@ -65,10 +65,10 @@
 #btncontactus
 {
     z-index: 1; 
-    left: 45%; 
+    left: 50%; 
     top: 6%; 
     position: absolute; 
-    height: 17%; 
+    height: 23%; 
     width: 20%;
     background-image: url('../Content/Images/th_DSC_0146-1.jpg');
     background-size:100% 100%;
@@ -79,14 +79,26 @@
     text-align:right;
     z-index: 1; 
     left: 4%; 
-    top: 57%; 
+    top: 55%; 
     position: absolute; 
-    height: 40%; 
-    width: 17%;
+    height: 42%; 
+    width: 16%;
     background-image: url('../Content/Images/th_101003CLJNSANDERSF04.JPG');
     background-size:100% 100%;
 }
 
+#BreakingNews
+{
+    text-align:center;
+    position:absolute;
+    left:23%;
+    top:53%;
+    height:45%;
+    width:15%;
+    border:1px dotted goldenrod;
+}
+
+/*  HIDDEN HOME PAGE LINKS
 #btnreverbnation
 {
     z-index: 1; 
@@ -134,3 +146,4 @@
     background-image: url('../Styles/Layout/FacebookLogo.png');
     background-size:100% 100%;
 }
+*/
