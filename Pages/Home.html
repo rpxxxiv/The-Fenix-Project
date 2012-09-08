@@ -13,7 +13,13 @@
     <script type="text/javascript" src="../Scripts/FullCalendar/ADNWAgendaPlugin.js"></script>
     <script type="text/javascript">
         $(window).ready(function () {
-            $('#agenda').Agenda({maxResults:3});
+            $('#agenda').Agenda({ maxResults: 3 });
+            $('.btnMember').click(function () {
+                if (window != window.top) {
+                    window.location.href = 'AboutUs.html?id=' + $(this).attr('id').toString();
+
+                }
+            });
         });
     </script>
 </head>
@@ -39,13 +45,12 @@
     <!--About us-->
     <a href="AboutUs.html">
     <div id="btnaboutus" class="homebtns">
-        <img src="../Content/Images/th_DSC_7581-1.jpg" title="Jason Thomas" height="25%" width="25%" style="position:absolute; top:5%; left:5%;" />
-        <img src="../Content/Images/th_JeffOtto-1.jpg" title="Jeff Otto" height="25%" width="25%" style="position:absolute; top:70%; left:70%;" />
-        <img src="../Content/Images/th_Fred-1.jpg" title="Fred Garner" height="25%" width="25%" style="position:absolute; top:70%; left:37%;" />
-        <img src="../Content/Images/DSC_1152-1.jpg" title="Miles Thompson"height="25%" width="25%" style="position:absolute; top:37%; left:5%;" />
-        <img src="../Content/Images/DSC_1368-2.jpg" title="Jeff Frankel" height="25%" width="25%" style="position:absolute; top:70%; left:5%;" />
-        <img src="../Styles/Layout/AboutUsLogo.png" height="15%" width="10%" style="position: absolute; top: 3%; right:3%;">
-        <p style="position:absolute; bottom:0%; margin-bottom:0%; left:33%; width:33%;">About Us</p>
+        <img class="btnMember" id="a6e15e23-1f08-4c9d-8091-087a9300c531" src="../Content/Images/th_DSC_7581-1.jpg" title="Jason Thomas" height="25%" width="25%" style="position:absolute; top:5%; left:5%;" />
+        <img class="btnMember" id="b93b66b1-d1c8-436e-8bdb-07daae090544"  src="../Content/Images/th_JeffOtto-1.jpg" title="Jeff Otto" height="25%" width="25%" style="position:absolute; top:70%; left:70%;" />
+        <img class="btnMember" id="da0c333c-1dde-4468-a729-3aa1cc5f41a7"  src="../Content/Images/th_Fred-1.jpg" title="Fred Garner" height="25%" width="25%" style="position:absolute; top:70%; left:37%;" />
+        <img class="btnMember" id="f7736b8d-1f2e-4744-a4fb-b05861b1f4b9"  src="../Content/Images/DSC_1152-1.jpg" title="Miles Thompson"height="25%" width="25%" style="position:absolute; top:37%; left:5%;" />
+        <img class="btnMember" id="30274543-c2f1-4cbe-9e75-aef49ec6ab8a"  src="../Content/Images/DSC_1368-2.jpg" title="Jeff Frankel" height="25%" width="25%" style="position:absolute; top:70%; left:5%;" />
+        <p align="right"><img src="../Styles/Layout/AboutUsLogo.png" height="15%" width="10%" style="position: absolute; top: 3%; left: 55%;">About Us</p>
     </div>
     </a>
     <!--Contact us-->
@@ -57,7 +62,7 @@
     <!--Guestbook-->
     <a href="GuestBook.html" >
     <div id="btnguestbook" class="homebtns">
-        <img src="../Styles/Layout/GuestbookLogo.png" height="15%" width="17%" style="position:absolute; top:15%; left:2%;"/>Guestbook<br />and Email
+        <img src="../Styles/Layout/GuestbookLogo.png" height="15%" width="15%" style="position:absolute; top:15%; left:2%;"/>Guestbook<br />and Email
     </div>
     </a>
     

@@ -22,6 +22,9 @@ var mbDefaults = {
     guestbookEntryTemplate: '../Controls/Guestbook/GuestbookEntry.htm'
 
 }
+
+
+
 $.fn.Members = function (opts) {
     options = $.extend(true, {}, ProxyDefaults, mbDefaults, opts);
     if (options.Id != undefined && options.Id != '') {
@@ -32,6 +35,8 @@ $.fn.Members = function (opts) {
         var element = $(_element);
         var members = Members(element, options);
     });
+
+
 }
 
 function Members(element, options) {
@@ -70,10 +75,35 @@ function Members(element, options) {
         }
 
         function LoadMembers(source, options, element) {
+            var Parms = GetVars();
+
+
+            var id;
+            if (Parms['id']) {
+                id = Parms['id'].toString();
+            }
             var members = source.ClientMembers;
             members = members.sort(function (a, b) { return a.SortOrder - b.SortOrder; });
             for (var i = 0; i < members.length; i++) {
                 var jsonMember = members[i];
-                $(element).append(jsonMember.ClientMemberDescription);
+                $(element).append('<div id=' + jsonMember.ClientMemberId +'>'+jsonMember.ClientMemberDescription+'<div>');
+            }
+
+            
+            var childs = $(element).children();
+            if (id !== null && id) {
+                $(window).scrollTop($('#' + id).position().top);
             }
         }
+
+        function GetVars() {
+                var vars = [], hash;
+                var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+                for (var i = 0; i < hashes.length; i++) {
+                    hash = hashes[i].split('=');
+                    vars.push(hash[0]);
+                    vars[hash[0]] = hash[1];
+                }
+                
+                return vars;
+           }
