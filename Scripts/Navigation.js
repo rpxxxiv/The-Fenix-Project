@@ -1,7 +1,7 @@
 ﻿var $NavigationLinks = 
 [
     { Title: "Home", Icon: "Styles/Layout/HomeLogo.png", Page: "Pages/Home.html", InDomain : true},
-    { Title: "About Us", Icon: "Styles/Layout/AboutUsLogo.png", Page: "Pages/AboutUs.html?id=f7736b8d-1f2e-4744-a4fb-b05861b1f4b9", InDomain: true },
+    { Title: "About Us", Icon: "Styles/Layout/AboutUsLogo.png", Page: "Pages/AboutUs.html", InDomain: true },
     { Title: "Contact", Icon: "Styles/Layout/ContactLogo.png", Page: "Pages/Contact.html", InDomain: true},
     { Title: "Events", Icon: "Styles/Layout/EventsLogo.png", Page: "Pages/Events.html", InDomain: true},
     { Title: "Guestbook", Icon: "Styles/Layout/GuestbookLogo.png", Page: "Pages/Guestbook.html", InDomain: true},
